@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Button, InputText } from "../atoms";
+import { Button, InputText, InputNumber, InputDate } from "../atoms";
 import PropTypes from "prop-types";
+
 //
 export default  class Welcome extends Component{ 
 
@@ -18,14 +19,26 @@ export default  class Welcome extends Component{
 
 					</div>
 
+					
 					<div>
-						<input type="search" placeholder="pesquise aqui" className="input-text"/> 
+						
+						<input type="text" placeholder="pesquise aqui" className="input-text" onChange={ "" }/> 	
+
+					</div>
+
+					<div>
+						
+						<input type="number" className="input-number" onChange={ "" } value={"14"}/> 
+
+					</div>
+
+					<div>
+						<input clickAction={()=> console.log("data esolhida") } type="date" className="date" onChange={""} value={""}/>
 					</div>
 					
 			   </div>
 
-				
-				
+								
 		);
 
 	}
