@@ -5,20 +5,18 @@ export default class Button extends Component{
 
 	render (){
 
-		const{ children, clickAction }= this.props;
+		const{ children, clickAction, className } = this.props;
 		return (
-			<button className="button" onClick={ clickAction }> { children }</button>
-
+			<button className={`button ${className}`} onClick={clickAction}>{children}</button>
 		);
 	}
-
 }
 
 
 Button.propTypes={
 	// especifica qual o valor espera para tratativa
 	children: PropTypes.string.isRequired,
-	
+	className: PropTypes.string.isRequired,
 	clickAction: PropTypes.func.isRequired,
 };
 
