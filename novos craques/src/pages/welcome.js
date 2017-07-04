@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, InputText, InputNumber, InputDate } from "../atoms";
+import { Button, InputText, InputNumber, InputDate, InputMail } from "../atoms";
 import PropTypes from "prop-types";
 
 //
@@ -36,6 +36,9 @@ export default  class Welcome extends Component{
 						<input clickAction={()=> console.log("data esolhida") } type="date" className="date" onChange={""} value={""}/>
 					</div>
 					
+					<div>
+						<input type="email" className="input-email" onChange={""} placeholder="digite seu e-mail"/>
+					</div>
 			   </div>
 
 								
