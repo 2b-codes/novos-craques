@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 
 routes(app);
 
-const port = 8888;
+const port = 4000;
 
 app.listen(port, err => {
 	if(err) console.log(err);

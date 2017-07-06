@@ -4,13 +4,13 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import Routes from "./routes";
-import Reducers from "./reducers/index";
+import Reducers from "./reducers";
 
 const store = createStore(Reducers);
 
 ReactDom.render(
 	<Provider store={store}>
-		{ Routes() }
-	</Provider>,
+		{Routes()}
+	</Provider>, 
 	document.querySelector("[app-container]")
 );
