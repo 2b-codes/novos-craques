@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton } from "../atoms";
+import { Button, Link, InputText, Textarea, InputNumber, InputDate, Checkbox, RadioButton } from "../atoms";
 import PropTypes from "prop-types";
 
 //
@@ -14,11 +14,11 @@ export default  class Welcome extends Component{
 		return( 
 		   <div>
 		   		<div>
-					<Button clickAction={ ()=> console.log("fui clicado") }> clique para testar</Button>
+					<Link url="facebook.com"> clique para testar</Link>
 				</div>
 				<div>
-					<InputText 
-						placeholder="pesquise aqui" 
+					<Textarea 
+						placeholder="pesquise se foder aqui" 
 						className="input-text" 
 						onChange={ () => console.log("ALTEREI") }
 					/> 	
