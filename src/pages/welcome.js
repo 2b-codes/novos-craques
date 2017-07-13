@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton } from "../atoms";
+import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputMail, InputCep, InputCpf } from "../atoms";
 import PropTypes from "prop-types";
 
 //
 export default  class Welcome extends Component{ 
 
-	constructor(props){
-
+	constructor(props){ 	
 		super(props);
 	}
 
@@ -46,6 +45,33 @@ export default  class Welcome extends Component{
 						label="HORNET"
 						className="Slow"
 						onChange={()=> console.log("ALTERADO")}
+					/>
+				</div>		
+
+				<div>
+					<InputMail 
+						
+						className="input-mail" 
+						onChange={ () => console.log("teste")}
+					/> 	
+				</div>
+
+				<div>
+					<InputCep
+						className="input-cep"
+						value=""
+						id="KKK"
+						onChange={ () => console.log("entra cep")}
+
+					/>
+				</div>
+				<div>
+					<InputCpf 
+						value={""}
+						className="input-cpf"
+						placeholder="000000000-00"
+						onChange={""}
+
 					/>
 				</div>
 		   </div>
