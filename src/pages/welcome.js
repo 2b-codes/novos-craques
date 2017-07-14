@@ -69,7 +69,7 @@ export default  class Welcome extends Component{
 					<InputCpf 
 						value={""}
 						className="input-cpf"
-						placeholder="000000000-00"
+						
 						onChange={""}
 
 					/>
