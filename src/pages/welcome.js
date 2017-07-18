@@ -49,7 +49,7 @@ export default  class Welcome extends Component{
 				</div>		
 
 				<div>
-					<InputMail 
+					<InputMail 	
 						
 						className="input-mail" 
 						onChange={ () => console.log("teste")}
@@ -59,7 +59,7 @@ export default  class Welcome extends Component{
 				<div>
 					<InputCep
 						className="input-cep"
-						value=""
+						//value=""
 						id="KKK"
 						onChange={ () => console.log("entra cep")}
 
@@ -67,10 +67,10 @@ export default  class Welcome extends Component{
 				</div>
 				<div>
 					<InputCpf 
-						value={""}
+						//value={""}
 						className="input-cpf"
 						
-						onChange={""}
+						onChange={()=>console.log("teste cpf")} 
 
 					/>
 				</div>

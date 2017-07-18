@@ -13,7 +13,7 @@ export default class InputCep extends Component{
 				type="text"
 				className={`input-cep ${className}`}
 				id={ id }
-				value=""
+				value={value}
 				onChange={ onChange }
 				placeholder="000000-000"
 			/>

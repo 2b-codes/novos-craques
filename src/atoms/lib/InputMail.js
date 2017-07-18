@@ -12,7 +12,7 @@ export default class InputMail extends Component{
 				onChange={ onChange }
 				value={ value }
 				id={ id }
-				placeholder="exemplo@exemplo.com"
+				placeholder="exemplo@email.com"
 			/>
 		);
 	}
