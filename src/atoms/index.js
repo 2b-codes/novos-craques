@@ -15,7 +15,9 @@ import TitlePage from "./lib/TitlePage";
 import SubTitle from "./lib/SubTitle";
 import Link from "./lib/Link";
 import Picture from "./lib/Picture";
-
+import BackImage from "./lib/BackImage";
+import Video from "./lib/Video";
+ 
 
 export {
 	Button,
@@ -33,6 +35,9 @@ export {
 	TitlePage,
 	SubTitle,
 	Link,
-	Picture
+	Picture,
+	BackImage,
+
+	Video
 
 };

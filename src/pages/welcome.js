@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputMail, InputCep, InputCpf, Picture } from "../atoms";
+import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputMail, InputCep, InputCpf,
+ Picture, BackImage, Video } from "../atoms";
 import PropTypes from "prop-types";
 
 //
@@ -67,7 +68,7 @@ export default  class Welcome extends Component{
 				</div>
 				<div>
 					<InputCpf 
-						//value={""}
+						value={""}
 						className="input-cpf"
 						
 						onChange={()=>console.log("teste cpf")} 
@@ -77,12 +78,25 @@ export default  class Welcome extends Component{
 
 				<div>
 					<Picture 
-						src="http://tophdimgs.com/data_images/wallpapers/12/366872-diego-armando-maradona.jpg"
-						//onclick=""
+						
+						onclick={""}
 						className="picture"
 
 					/>
-
+				</div>
+				<div>
+					<BackImage 
+						src={""}
+						className="back-image"
+						id={""}
+						/>
+				</div>
+				<div>
+					<video
+						src={""}
+						className="video"
+						id={""}
+						/>
 				</div>
 		   </div>
 		);
