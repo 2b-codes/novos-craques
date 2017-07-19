@@ -14,6 +14,7 @@ import Textarea from "./lib/Textarea";
 import TitlePage from "./lib/TitlePage";
 import SubTitle from "./lib/SubTitle";
 import Link from "./lib/Link";
+import Picture from "./lib/Picture";
 
 
 export {
@@ -31,6 +32,7 @@ export {
 	Textarea,
 	TitlePage,
 	SubTitle,
-	Link
+	Link,
+	Picture
 
 };
