@@ -17,7 +17,8 @@ import Link from "./lib/Link";
 import Picture from "./lib/Picture";
 import BackImage from "./lib/BackImage";
 import Video from "./lib/Video";
- 
+import DropDown from "./lib/DropDown";
+
 
 export {
 	Button,
@@ -38,6 +39,7 @@ export {
 	Picture,
 	BackImage,
 
-	Video
+	Video,
+	DropDown
 
 };

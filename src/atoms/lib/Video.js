@@ -7,11 +7,13 @@ export default class Video extends Component{
 		const{src, className, id, onClick}=this.props;
 		return(
 			<video 
-				src="https://youtu.be/ckZtj9kMFm4"
 				className={`video ${className}`}
-				id="id"
-				onClick={ clickAction }
-				/>
+				onClick={ clickAction } >
+
+				<source src="https://youtu.be/GrYFE9ZlVAU" type="vide/mp4"/>
+				<source src="https://youtu.be/GrYFE9ZlVAU" type="video/ogg"/>
+		
+  			</video>
 		);
 	}
 }

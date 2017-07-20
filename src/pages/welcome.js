@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputMail, InputCep, InputCpf,
- Picture, BackImage, Video } from "../atoms";
+ Picture, BackImage, Video, DropDown } from "../atoms";
 import PropTypes from "prop-types";
+import Dropdown from 'react-toolbox/lib/dropdown';
+
 
 //
 export default  class Welcome extends Component{ 
@@ -13,6 +15,12 @@ export default  class Welcome extends Component{
 	render(){
 		return( 
 		   <div>
+
+		   		<div>
+					<DropDown
+					className="drop"
+					/>
+				</div>
 		   		<div>
 					<Button clickAction={ ()=> console.log("fui clicado") }> clique para testar</Button>
 				</div>
@@ -98,6 +106,7 @@ export default  class Welcome extends Component{
 						id={""}
 						/>
 				</div>
+
 		   </div>
 		);
 	}
