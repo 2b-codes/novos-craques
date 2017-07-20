@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default class InputNumber extends Component {
 
 	render() {
-		const{ onChange, id, value, className, placeholder }= this.props;
+		const{ onChange, id, value, className }= this.props;
 		return(
 			<input 
 				type="number" 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class BackImage extends Component {
+export default class BackgroundImage extends Component {
 
 	render() {
 		const{ src, className, id }= this.props;
@@ -11,12 +11,11 @@ export default class BackImage extends Component {
 				className={`back-image ${className}`}
 				id={id}
 			/>
-
 		);
 	}
 }
 
-BackImage.propTypes = {	
+BackgroundImage.propTypes = {	
 	src: PropTypes.string.isRequired,
 	className: PropTypes.string.isRequired,
 	id: PropTypes.string

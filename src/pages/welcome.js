@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputMail, InputCep, InputCpf,
- Picture, BackImage, Video, Icon } from "../atoms";
+import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputCep, InputCpf,
+ Picture, Video, Icon } from "../atoms";
 import PropTypes from "prop-types";
 
-//
+
 export default  class Welcome extends Component{ 
 
 	constructor(props){ 	

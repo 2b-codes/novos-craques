@@ -11,7 +11,7 @@ export default class InputCpf extends Component {
 				value={value}
 				id={id}
 				className={`input-cpf ${className}`}
-				onChange={ this.SPMaskBehavior }
+				onChange={onChange}
 				placeholder={placeholder}
 			/>
 		);

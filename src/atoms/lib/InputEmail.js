@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class InputMail extends Component {
+export default class InputEmail extends Component {
 
 	render() {
 		const{ className, onChange, value, id, placeholder } = this.props;
@@ -18,7 +18,7 @@ export default class InputMail extends Component {
 	}
 }
 
-InputMail.propTypes = {
+InputEmail.propTypes = {
 
 	className: PropTypes.string.isRequired,
 	onChange: PropTypes.func.isRequired,

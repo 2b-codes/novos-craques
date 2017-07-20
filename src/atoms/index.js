@@ -1,40 +1,40 @@
 //
+import BackgroundImage from "./lib/BackgroundImage";
 import Button from "./lib/Button";
-import InputText from "./lib/InputText";
-import InputNumber from "./lib/InputNumber";
-import InputDate from "./lib/InputDate";
 import Checkbox from "./lib/Checkbox";
-import RadioButton from "./lib/RadioButton";
-import InputMail from "./lib/InputMail";
+import DropDown from "./lib/DropDown";
+import Icon from "./lib/Icon";
 import InputCep from "./lib/InputCep";
 import InputCpf from "./lib/InputCpf";
-import Textarea from "./lib/Textarea";
-import TitlePage from "./lib/TitlePage";
-import SubTitle from "./lib/SubTitle";
+import InputDate from "./lib/InputDate";
+import InputEmail from "./lib/InputEmail";
+import InputNumber from "./lib/InputNumber";
+import InputText from "./lib/InputText";
 import Link from "./lib/Link";
 import Picture from "./lib/Picture";
-import BackImage from "./lib/BackImage";
+import RadioButton from "./lib/RadioButton";
+import SubTitle from "./lib/SubTitle";
+import Textarea from "./lib/Textarea";
+import TitlePage from "./lib/TitlePage";
 import Video from "./lib/Video";
-import Icon from "./lib/Icon";
- 
 
 export {
+	BackgroundImage,
 	Button,
-	InputText,
-	InputNumber,
-	InputDate,
 	Checkbox,
-	RadioButton,
+	DropDown,
 	Icon,
-	InputMail,
 	InputCep,
 	InputCpf,
-	Textarea,
-	TitlePage,
-	SubTitle,
+	InputDate,
+	InputEmail,
+	InputNumber,
+	InputText,
 	Link,
 	Picture,
-	BackImage,
-	Video
-
+	RadioButton,
+	SubTitle,
+	Textarea,
+	TitlePage,
+	Video,
 };

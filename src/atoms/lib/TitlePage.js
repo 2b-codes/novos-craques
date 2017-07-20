@@ -20,7 +20,7 @@ export default class TitlePage extends Component {
 }
 
 
-TitlePage.propTypes={
+TitlePage.propTypes = {
 	children: PropTypes.string.isRequired,
 	className: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,

@@ -24,7 +24,7 @@ export default class Textarea extends Component {
 	}
 }
 
-Textarea.PropTypes={
+Textarea.propTypes = {
 	id: PropTypes.string.isrequired,
 	placeholder: PropTypes.string.isrequired,
 	onChange: PropTypes.func.isrequired,

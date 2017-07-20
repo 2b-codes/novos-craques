@@ -17,10 +17,8 @@ export default class Video extends Component {
 }
 
 Video.PropTypes = {
-
 	src: PropTypes.string.isRequired,
 	className: PropTypes.string.isRequired,
 	id: PropTypes.string.isRequired,
 	onClick: PropTypes.func.isRequired
-	
 };
