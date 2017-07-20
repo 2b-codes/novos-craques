@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class Link extends Component{
+export default class Link extends Component {
 
-	render (){
-
-		const{ children, url, className } = this.props;
+	render() {
+		const{ children, url, className, id } = this.props;
 		return (
-			<a className={`link ${className}`} href={url}>{children}</a>
+			<a id={id} className={`link ${className}`} href={url}>{children}</a>
 		);
 	}
 }
@@ -17,6 +16,7 @@ Link.propTypes={
 	// especifica qual o valor espera para tratativa
 	children: PropTypes.string.isRequired,
 	className: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
 	url: PropTypes.func.isRequired,
 };
 

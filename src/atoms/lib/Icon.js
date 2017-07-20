@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { icons } from "../../models/index";
+import icons from "../../assets/icons";
 
 export default class Icon extends Component {
 
 	render() {
-		const { className, type, clickAction } = this.props;
-
+		const { type, clickAction, id, className } = this.props;
+		console.log(icons, type);
 		return (
-			<img src={icons[type]} onCLick={clickAction} className={`Icon ${className}`}/>
+			<svg id={id} onClick={clickAction} className={`icon ${className}`}>
+				{icons[type]}
+			</svg>
 		);
 	}
 }
 
 Icon.propTypes = {
-	type: PropTypes.string.isRequired
+	type: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	className: PropTypes.string.isRequired,
+	clickAction: PropTypes.func
+
 };

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class InputText extends Component{
+export default class InputText extends Component {
 
-	render(){
+	render() {
 		const{ className, id, onChange, value, placeholder }= this.props;
 		return(
 			// os ${}  concatena string,  entre as chaves é string 
@@ -11,9 +11,9 @@ export default class InputText extends Component{
 			// o className do button é uma variável pois no nome pode ser alterado
 			<input
 				className={`input-text ${className}`} 
-				id={ id } 
-				onChange={ onChange } 
-				value={ value } 
+				id={id}
+				onChange={onChange}
+				value={value} 
 				placeholder={placeholder}
 				type="text" 
 			/>
@@ -21,7 +21,7 @@ export default class InputText extends Component{
 	}
 }
 
-InputText.propTypes={
+InputText.propTypes = {
 	className: PropTypes.string.isRequired,
 	id: PropTypes.string.isRequired,
 	onChange: PropTypes.string.isRequired,

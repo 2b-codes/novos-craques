@@ -17,7 +17,7 @@ export default class Checkbox extends Component {
 	}
 }
 
-Checkbox.PropTypes={
+Checkbox.propTypes = {
 	id: PropTypes.string.isrequired,
 	onChange: PropTypes.func.isrequired,
 	value: PropTypes.string.isrequired,

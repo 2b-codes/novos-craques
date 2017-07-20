@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class InputDate extends Component{
+export default class InputDate extends Component {
 
-	render(){
+	render() {
 		const{ onClick, value, className }=this.props;
 		return(
 			 <input type="date" onClick={onClick} className={`date ${className}`} value={value}/>

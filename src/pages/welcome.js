@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Button, Link, InputText, Textarea, InputNumber, InputDate, Checkbox, RadioButton } from "../atoms";
+import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputMail, InputCep, InputCpf,
+ Picture, BackImage, Video, Icon } from "../atoms";
 import PropTypes from "prop-types";
 
 //
 export default  class Welcome extends Component{ 
 
-	constructor(props){
-
+	constructor(props){ 	
 		super(props);
 	}
 
@@ -14,39 +14,25 @@ export default  class Welcome extends Component{
 		return( 
 		   <div>
 		   		<div>
-					<Link url="facebook.com"> clique para testar</Link>
-				</div>
-				<div>
-					<Textarea 
-						placeholder="pesquise se foder aqui" 
-						className="input-text" 
-						onChange={ () => console.log("ALTEREI") }
-					/> 	
-				</div>
-				<div>
-					<InputNumber 
-						className="input-number" 
-						onChange={ () => console.log("ALTEREI") }
-						value={"14"}
-					/> 
-				</div>
-				<div>
-					<InputDate 
-						clickAction={()=> console.log("data esolhida") } 
-						type="date" className="date" 
-						onChange={""} 
-						value={""}
-					/>
-				</div>
-				<div>
-					<RadioButton 
-						value="AAA"
-						name="AA"
-						id="AA"
-						label="HORNET"
-						className="Slow"
-						onChange={()=> console.log("ALTERADO")}
-					/>
+					<Icon type="logout" />
+					<Icon type="about" />
+					<Icon type="home" />
+					<Icon type="settings" />
+					<Icon type="avatar" />
+					<Icon type="menu" />
+					<Icon type="checked" />
+					<Icon type="downArrow" />
+					<Icon type="close" />
+					<Icon type="circularChecked" />
+					<Icon type="arrowBold" />
+					<Icon type="search" />
+					<Icon type="avatarLight" />
+					<Icon type="friends" />
+					<Icon type="follow" />
+					<Icon type="cam" />
+					<Icon type="like" />
+					<Icon type="greenMore" />
+					<Icon type="plus" />
 				</div>
 		   </div>
 		);
