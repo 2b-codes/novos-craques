@@ -7,7 +7,6 @@ export default class Icon extends Component {
 
 	render() {
 		const { type, clickAction, id, className } = this.props;
-		console.log(icons, type);
 		return (
 			<svg id={id} onClick={clickAction} className={`icon ${className}`}>
 				{icons[type]}

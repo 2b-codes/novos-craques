@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { CardMotivation } from "../molecules";
+import { ProgressForm } from "../molecules";
+import { Button } from "../atoms";
 import PropTypes from "prop-types";
 
 
@@ -7,18 +8,34 @@ export default  class Welcome extends Component{
 
 	constructor(props){ 	
 		super(props);
+		this.state={
+			step: 0
+		};
+	}
+
+	addStep(){
+		setTimeout(() => {
+			let { step } = this.state;
+			step==9 ? step = 0 : step ++;
+			this.setState({step});
+		}, 2000);
+	}
+	add(){
+		console.log("aqui");
+		let { step } = this.state;
+		step==9 ? step = 0 : step ++;
+		this.setState({step});
 	}
 
 	render(){
 		return( 
 		   <div>
-				<CardMotivation 
-					src={"https://css-tricks.com/wp-content/uploads/2013/04/align-content.svg"}
-					onClick={() => console.log("CLiCADO")}
-					className={"lool"}
-					text={"lsdfhls hsdl sjdhf sjhfkh feelfesjk jshf shg ljg eslj erkslj ser gslrk gls gsr geos kldgjh serl hgselh gseklrhjg ser hgkrslh gjskehgshklshgrskd gsj ghse srgh giuh seuih seiu hgesuih giughr"}
-					subtitle={"TITULO"}
+				<ProgressForm 
+					numberSteeps={10}
+					step={this.state.step}
 				/>
+				{this.addStep()}
+				
 		   </div>
 		);
 	}

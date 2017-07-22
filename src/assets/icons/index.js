@@ -17,6 +17,8 @@ import cam from "./lib/cam";
 import like from "./lib/like";
 import greenMore from "./lib/greenMore";
 import plus from "./lib/plus";
+import circleSelected from "./lib/circleSelected";
+import circle from "./lib/circle";
 
 export default {
 	about,
@@ -37,5 +39,7 @@ export default {
 	cam,
 	like,
 	greenMore,
-	plus
+	plus,
+	circleSelected,
+	circle
 };
