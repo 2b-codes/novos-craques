@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Button, InputText, InputNumber, InputDate, Checkbox, RadioButton, InputCep, InputCpf,
- Picture, Video, Icon } from "../atoms";
+import { ProfileImageName } from "../molecules";
 import PropTypes from "prop-types";
 
 
@@ -13,27 +12,13 @@ export default  class Welcome extends Component{
 	render(){
 		return( 
 		   <div>
-		   		<div>
-					<Icon type="logout" />
-					<Icon type="about" />
-					<Icon type="home" />
-					<Icon type="settings" />
-					<Icon type="avatar" />
-					<Icon type="menu" />
-					<Icon type="checked" />
-					<Icon type="downArrow" />
-					<Icon type="close" />
-					<Icon type="circularChecked" />
-					<Icon type="arrowBold" />
-					<Icon type="search" />
-					<Icon type="avatarLight" />
-					<Icon type="friends" />
-					<Icon type="follow" />
-					<Icon type="cam" />
-					<Icon type="like" />
-					<Icon type="greenMore" />
-					<Icon type="plus" />
-				</div>
+				<ProfileImageName 
+					src={"https://s-media-cache-ak0.pinimg.com/736x/74/52/d3/7452d38f550def302016a6bbf378a81b--natural-hair-art-black-artwork.jpg"}
+					onClick={console.log("clicked")}
+					className={"shit"}
+					id={"ODEIO ISSO"}
+					name={"Cuzão"}
+				/>
 		   </div>
 		);
 	}
