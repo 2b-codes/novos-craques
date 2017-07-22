@@ -13,6 +13,7 @@ export default class Button extends Component {
 }
 
 
+
 Button.propTypes = {
 	// especifica qual o valor espera para tratativa
 	id: PropTypes.string.isRequired,
