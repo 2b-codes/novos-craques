@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { Picture } from "../../atoms";
 
-export default class ProfileName extends Component {
+export default class ProfileImageName extends Component {
 
 	render() {
 		const { src, onClick, className, id, name } = this.props;
@@ -21,9 +21,10 @@ export default class ProfileName extends Component {
 	}
 }
 
-ProfileName.PropTypes={
-	id: PropTypes.string.isRequired,
+ProfileImageName.PropTypes={
+	src: PropTypes.string.isRequired,
+	onClick: PropTypes.func.isRequired,
 	className: PropTypes.string.isRequired,
-	label: PropTypes.string.isRequired,
-	children: PropTypes.isRequired
+	id: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
 };
