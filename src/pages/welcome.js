@@ -13,7 +13,6 @@ export default  class Welcome extends Component{
 		return( 
 		   <div>
 				<SearchBar 
-
 				/>
 		   </div>
 		);

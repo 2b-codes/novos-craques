@@ -6,16 +6,16 @@ import { InputText, Icon } from "../../atoms";
 export default class SearchBar extends Component {
 
 	render() {
-		const { className } = this.props;
+		const { className, id, value, onChange, placeholder } = this.props;
 		return(
 			<div className={`search-bar ${className}`}>
-				<Icon type="search" />
+				<Icon type="search" id="searchIcon"/>
 				<InputText
 					className={"search-input"}
-					id={"search"}
-					onChange={e => console.log("mudei pra ", e.target.value)}
-					value={""}
-					placeholder={"Pesquisar"}
+					id={id}
+					onChange={onChange}
+					value={value}
+					placeholder={placeholder}
 				/>
 			</div>
 		);
@@ -25,6 +25,7 @@ export default class SearchBar extends Component {
 SearchBar.PropTypes={
 	id: PropTypes.string.isRequired,
 	className: PropTypes.string.isRequired,
-	label: PropTypes.string.isRequired,
-	children: PropTypes.isRequired
+	value: PropTypes.string.isRequired,
+	placeholder: PropTypes.string.isRequired,
+	onChange: PropTypes.func.isRequired,
 };
