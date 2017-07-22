@@ -7,8 +7,8 @@ export default class SubTitle extends Component {
 		const { type, children, className, id } = this.props;
 		switch(type) {
 			
-			case h5: return <h5 id={id} className={`subtitle-page ${className}`}>{children}</h5>;
-			case h6: return <h6 id={id} className={`subtitle-page ${className}`}>{children}</h6>;
+			case "h5": return <h5 id={id} className={`subtitle-page ${className}`}>{children}</h5>;
+			case "h6": return <h6 id={id} className={`subtitle-page ${className}`}>{children}</h6>;
 			
 			default: return <h4 id={id} className={`subtitle-page ${className}`}>{children}</h4>;
 		}
@@ -23,7 +23,7 @@ export default class SubTitle extends Component {
 SubTitle.propTypes={
 	children: PropTypes.string.isRequired,
 	className: PropTypes.string.isRequired,
-	type: PropTypes.string.isRequired,
+	type: PropTypes.string,
 	id: PropTypes.string.isRequired,
 };
 
