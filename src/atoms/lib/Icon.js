@@ -7,7 +7,6 @@ export default class Icon extends Component {
 
 	render() {
 		const { type, clickAction, id, className } = this.props;
-		console.log(icons, type);
 		return (
 			<svg id={id} onClick={clickAction} className={`icon ${className}`}>
 				{icons[type]}
@@ -19,7 +18,7 @@ export default class Icon extends Component {
 Icon.propTypes = {
 	type: PropTypes.string.isRequired,
 	id: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
+	className: PropTypes.string,
 	clickAction: PropTypes.func
 
 };
