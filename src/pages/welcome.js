@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { ProgressForm } from "../molecules";
-import { Button } from "../atoms";
+import { InputNumber } from "../atoms";
 import PropTypes from "prop-types";
 
 
@@ -9,33 +9,29 @@ export default  class Welcome extends Component{
 	constructor(props){ 	
 		super(props);
 		this.state={
-			step: 0
+			values: {
+				number: ""
+			}
 		};
 	}
 
-	addStep(){
-		setTimeout(() => {
-			let { step } = this.state;
-			step==9 ? step = 0 : step ++;
-			this.setState({step});
-		}, 2000);
-	}
-	add(){
-		console.log("aqui");
-		let { step } = this.state;
-		step==9 ? step = 0 : step ++;
-		this.setState({step});
+	handleChange(e) {
+		const {values} = this.state;
+		const {id, value} = e.target;
+		values[id] = value;
+		this.setState({values});
 	}
 
 	render(){
+		console.log("STATE", this.state);
 		return( 
 		   <div>
-				<ProgressForm 
-					numberSteeps={10}
-					step={this.state.step}
+				<InputNumber 
+					id={"number"}
+					onChange={this.handleChange.bind(this)}
+					value={this.state.values["number"]}
+					placeholder={"sdhkf"}
 				/>
-				{this.addStep()}
-				
 		   </div>
 		);
 	}
