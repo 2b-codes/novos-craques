@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { SearchBar } from "../molecules";
 import PropTypes from "prop-types";
+
+import { ButtonIcon } from "../molecules";
+import { InputDate } from "../atoms";
 
 
 export default  class Welcome extends Component{ 
@@ -23,19 +25,15 @@ export default  class Welcome extends Component{
 	}
 
 	render(){
-		console.log("STATE", this.state);
-		return( 
-		   <div>
-				<ButtonIcon 
-					onClick={() => console.log("clockado")}
-					label={"Bão Loko"}
-					iconType={"like"}
-					typeButton={"submit"}
-					id={"loko"}
-					className={"doidão"}
-					left
-				/>
-		   </div>
+		return(
+		   <div >
+			   <InputDate 
+				   onChange={this.handleChange} 
+				   value={this.state.values["date"]}
+				   noInput={false}
+				   noTime
+				 />
+			</div>
 		);
 	}
 }
