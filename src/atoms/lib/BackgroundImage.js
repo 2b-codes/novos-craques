@@ -17,7 +17,7 @@ export default class BackgroundImage extends Component {
 
 BackgroundImage.propTypes = {	
 	src: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
+	className: PropTypes.string,
 	id: PropTypes.string
 
 };

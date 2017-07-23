@@ -15,8 +15,8 @@ export default class Link extends Component {
 Link.propTypes={
 	// especifica qual o valor espera para tratativa
 	children: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
-	id: PropTypes.string.isRequired,
 	url: PropTypes.func.isRequired,
+	className: PropTypes.string,
+	id: PropTypes.string,
 };
 

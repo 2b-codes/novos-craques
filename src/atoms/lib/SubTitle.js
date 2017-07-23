@@ -22,9 +22,9 @@ export default class SubTitle extends Component {
 
 SubTitle.propTypes={
 	children: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
-	type: PropTypes.string,
 	id: PropTypes.string.isRequired,
+	className: PropTypes.string,
+	type: PropTypes.string,
 };
 
 

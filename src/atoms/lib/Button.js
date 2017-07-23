@@ -18,8 +18,8 @@ Button.propTypes = {
 	// especifica qual o valor espera para tratativa
 	id: PropTypes.string.isRequired,
 	children: PropTypes.string.isRequired,
-	type: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
+	type: PropTypes.string,
+	className: PropTypes.string,
 	onClick: PropTypes.func.isRequired,
 };
 

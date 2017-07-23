@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { ProgressForm } from "../molecules";
-import { InputCep, InputCpf } from "../atoms";
+import { InputCep, InputCpf, Link } from "../atoms";
 import PropTypes from "prop-types";
 
 
@@ -39,6 +39,7 @@ export default  class Welcome extends Component{
 					value={this.state.values["cpf"]}
 					placeholder={"sdhkf"}
 				/>
+				<Link url="facebook.com">asdasdasdasd</Link>
 		   </div>
 		);
 	}

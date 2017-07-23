@@ -16,7 +16,7 @@ export default class Picture extends Component {
 	}
 }
 
-Picture.PropTypes={
+Picture.propTypes = {
 	src: PropTypes.string,
 	id: PropTypes.string,
 	className: PropTypes.string,

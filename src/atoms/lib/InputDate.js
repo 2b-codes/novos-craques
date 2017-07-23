@@ -14,5 +14,5 @@ export default class InputDate extends Component {
 InputDate.propTypes = {
 	onClick: PropTypes.func.isRequired,
 	value: PropTypes.func.isRequired,
-	className: PropTypes.isRequired
+	className: PropTypes.string
 };
