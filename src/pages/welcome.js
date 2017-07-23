@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ProgressForm } from "../molecules";
+import { SearchBar } from "../molecules";
 import PropTypes from "prop-types";
 
 
