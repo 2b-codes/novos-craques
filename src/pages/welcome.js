@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { ProgressForm } from "../molecules";
-import { InputCep, InputCpf, Title } from "../atoms";
-import { NumberLikes } from "../molecules";
 import PropTypes from "prop-types";
 
 
@@ -28,9 +26,14 @@ export default  class Welcome extends Component{
 		console.log("STATE", this.state);
 		return( 
 		   <div>
-				<NumberLikes 
-					className={"shit"}
-					number={77}
+				<ButtonIcon 
+					onClick={() => console.log("clockado")}
+					label={"Bão Loko"}
+					iconType={"like"}
+					typeButton={"submit"}
+					id={"loko"}
+					className={"doidão"}
+					left
 				/>
 		   </div>
 		);

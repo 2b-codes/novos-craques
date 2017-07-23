@@ -17,7 +17,7 @@ export default class Icon extends Component {
 
 Icon.propTypes = {
 	type: PropTypes.string.isRequired,
-	id: PropTypes.string,
 	className: PropTypes.string,
-	clickAction: PropTypes.func
+	clickAction: PropTypes.func,
+	id: PropTypes.string,
 };
