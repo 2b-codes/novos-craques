@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { ProgressForm } from "../molecules";
-import { InputNumber } from "../atoms";
+import { InputCpf } from "../atoms";
 import PropTypes from "prop-types";
 
 
@@ -26,7 +26,7 @@ export default  class Welcome extends Component{
 		console.log("STATE", this.state);
 		return( 
 		   <div>
-				<InputNumber 
+				<InputCpf
 					id={"number"}
 					onChange={this.handleChange.bind(this)}
 					value={this.state.values["number"]}

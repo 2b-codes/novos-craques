@@ -19,14 +19,14 @@ export default class InputNumber extends Component {
 	}
 	
 	keyDownChange(e) {
-		const{ onChange, id, value, }= this.props;
+		const{ onChange, id, value }= this.props;
 
 		e.keyCode==38 ? onChange({target: {id, value: parseInt(value || 0) + 1}}): null;
 		e.keyCode==40 ? onChange({target: {id, value: parseInt(value || 0) - 1}}): null;
 	}
 
 	render() {
-		const{ onChange, id, value, className, placeholder }= this.props;
+		const{ id, value, className, placeholder }= this.props;
 		return(
 			<div className={`input-number ${className}`}>
 				<input 
