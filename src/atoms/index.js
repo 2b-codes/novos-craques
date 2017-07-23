@@ -13,9 +13,9 @@ import InputText from "./lib/InputText";
 import Link from "./lib/Link";
 import Picture from "./lib/Picture";
 import RadioButton from "./lib/RadioButton";
-import SubTitle from "./lib/SubTitle";
+import Subtitle from "./lib/Subtitle";
 import Textarea from "./lib/Textarea";
-import TitlePage from "./lib/TitlePage";
+import Title from "./lib/Title";
 import Video from "./lib/Video";
 
 export {
@@ -33,8 +33,8 @@ export {
 	Link,
 	Picture,
 	RadioButton,
-	SubTitle,
+	Subtitle,
 	Textarea,
-	TitlePage,
+	Title,
 	Video,
 };
