@@ -17,8 +17,12 @@ export default  class Welcome extends Component{
 		return(
 						
 			<div>
+
 				<AboutUs 
-					className={""}
+
+					subtitle={"Que Somos"}
+					className={"quem-somos"}
+
 					text={"sdfsd"}
 				 />
 								
