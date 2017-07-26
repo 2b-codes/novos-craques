@@ -19,6 +19,8 @@ import greenMore from "./lib/greenMore";
 import plus from "./lib/plus";
 import circleSelected from "./lib/circleSelected";
 import circle from "./lib/circle";
+import arrowUpDown from "./lib/arrowUpDown";
+import calendar from "./lib/calendar";
 
 export default {
 	about,
@@ -41,5 +43,7 @@ export default {
 	greenMore,
 	plus,
 	circleSelected,
-	circle
+	circle,
+	arrowUpDown,
+	calendar
 };

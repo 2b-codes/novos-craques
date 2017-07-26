@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class SubTitle extends Component {
+export default class Subtitle extends Component {
 
-	renderSubTitle() {
+	renderSubtitle() {
 		const { type, children, className, id } = this.props;
 		switch(type) {
 			
@@ -15,16 +15,16 @@ export default class SubTitle extends Component {
 	}
 
 	render() {
-		return (this.renderSubTitle());
+		return (this.renderSubtitle());
 	}
 }
 
 
-SubTitle.propTypes={
+Subtitle.propTypes={
 	children: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
-	type: PropTypes.string,
 	id: PropTypes.string.isRequired,
+	className: PropTypes.string,
+	type: PropTypes.string,
 };
 
 

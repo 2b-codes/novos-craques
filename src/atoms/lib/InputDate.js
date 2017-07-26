@@ -1,12 +1,54 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import Datetime from "react-datetime";
+import { Icon } from "../";
+
 export default class InputDate extends Component {
 
+	
+
 	render() {
-		const{ onClick, value, className }=this.props;
+		const{
+			onChange, //Normal
+			value, //Normal
+			className, //Normal
+			defaultValue, //Valor que estará como padrão, pode colocar um new Date()
+			placeholder, //Normal
+			dateFormat, //Pode ser MM/YYY para apenas mês e ano ou YYYY para apenas ano
+			noInput, //Não postrar o input
+			noTime, //Não aceitar Hora
+			noCloseOnSelect, //Não fechar depois de clicar
+			noCloseOnTab, //Não fechar qaundo apertar tab
+			noOpenFocus,//Não abrir quando focar no input
+			onFocus,//Função para fazer algo no facus
+			viewMode,// "day", "year" e etc..
+			open,//Mostrar já aberto(true), ou mostrar apenas quando dar focus no input(false)
+
+		}=this.props;
+
+		const dateProps = { 
+			placeholder,
+			dateFormat: dateFormat || "DD/MM/YYYY",
+			timeFormat: !noTime,
+			onChange,
+			value,
+			locale: "pt-BR",
+			closeOnSelect: !noCloseOnSelect ,
+			closeOnTab: !noCloseOnTab,
+			defaultValue,
+			input: !noInput,
+			openFocus: !noOpenFocus,
+			onFocus: onFocus,
+			viewMode,
+			open: open,
+		};
+		const input = noInput ? {className: `input-date --noInput ${className}`} : null;
 		return(
-			 <input type="date" onClick={onClick} className={`date ${className}`} value={value}/>
+			<div className={input ? null : `input-date  ${className}`}>
+				<Datetime { ...dateProps } {...input}/>
+				{ input ? null :<Icon type="calendar" className="IconDangercalendar" />}
+			</div>
 		);
 	}
 }
@@ -14,5 +56,5 @@ export default class InputDate extends Component {
 InputDate.propTypes = {
 	onClick: PropTypes.func.isRequired,
 	value: PropTypes.func.isRequired,
-	className: PropTypes.isRequired
+	className: PropTypes.string
 };

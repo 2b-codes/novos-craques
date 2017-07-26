@@ -29,6 +29,6 @@ Textarea.propTypes = {
 	placeholder: PropTypes.string.isrequired,
 	onChange: PropTypes.func.isrequired,
 	value: PropTypes.string.isrequired,
-	className: PropTypes.string.isrequired,
-	rows: PropTypes.string.isrequired,
+	className: PropTypes.string,
+	rows: PropTypes.string,
 };

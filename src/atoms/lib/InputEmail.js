@@ -20,7 +20,7 @@ export default class InputEmail extends Component {
 
 InputEmail.propTypes = {
 
-	className: PropTypes.string.isRequired,
+	className: PropTypes.string,
 	onChange: PropTypes.func.isRequired,
 	value: PropTypes.string.isRequired,
 	id: PropTypes.string.isRequired,

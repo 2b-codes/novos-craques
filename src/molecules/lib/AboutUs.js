@@ -11,7 +11,7 @@ export default class AboutUs extends Component{
 			<div className={`aboutUs ${ className }`}>
 						
 				<SubTitle 
-					className={ `quem-somos ${ className }`}
+					className={ "quem-somos" }
 					children={ subtitle }
 					id={ "subAbout" }
 					value={ "Quem Somos" }

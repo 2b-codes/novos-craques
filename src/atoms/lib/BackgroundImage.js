@@ -6,8 +6,13 @@ export default class BackgroundImage extends Component {
 	render() {
 		const{ src, className, id }= this.props;
 		return(
-			<img
-				src={src}
+			<div
+				style={{
+					backgroundImage: `url(${src})`,
+				    backgroundColor: "#cccccc",
+				    backgroundRepeat: "no-repeat",
+				    backgroundSize: "100% auto"
+				}}
 				className={`back-image ${className}`}
 				id={id}
 			/>
@@ -17,7 +22,7 @@ export default class BackgroundImage extends Component {
 
 BackgroundImage.propTypes = {	
 	src: PropTypes.string.isRequired,
-	className: PropTypes.string.isRequired,
+	className: PropTypes.string,
 	id: PropTypes.string
 
 };

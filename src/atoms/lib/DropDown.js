@@ -1,37 +1,94 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import { Icon } from "../";
+
 export default class DropDown extends Component{
 
-	render(){
-		const{className, id, onSelect} =this.props;
-		return(
-			<select
-				className={`drop ${className}`}
+	constructor(props){
+		super(props);
+		this.state={
+			isOpen: false,
+			item: -1
+		};
+	}
+	clickAction(e, value) {
+		const a = e.querySelector(`#${value}`).focus();
+	}
+
+	renderItems() {
+		const { options, id, onChange } = this.props;
+		const { item } = this.state;
+		return options.map((option, i) =>
+			<li 
+				key={option.id}
+				className={`option ${item == i ? "selected" : "" }`}
 				id={id}
-				onSelect={ onSelect }>
+				value={option.id}
+				onClick={() => onChange({target: {id, value: option}})}
+			>
+				{option.label}
+			</li>
+		);
+	}
 
-				<option>First </option>
-	            <option>Second</option>
-	            <option>Third </option>
-	            <option>Forth </option>
-	            <option>Fifth </option>
-	            <option>Six   </option>
-	            <option>Seven </option>
-	            <option>Eight </option>
-	            <option>Ten   </option>
-	            <option>Eleven</option>
-	            <option>Twelve</option>
-          	</select>   
+	renderList() {
+		return (
+			<div className="listOptions">
+				<ul className="list">
+					{this.renderItems()}
+				</ul>
+			</div>
+		);
+	}
 
+	openDropDown() {
+		return this.state.isOpen ? this.renderList() : null;
+	}
+
+	focus() {
+		let { isOpen } = this.state;
+		isOpen = !isOpen;
+		this.setState({isOpen});
+	}
+
+	keyDownChange(e) {
+		const{ onChange, id, options }= this.props;
+		const { item } = this.state;
+		console.log(e.keyCode);
+		if(e.keyCode==38 && item>0) this.setState({item: item-1});
+		if(e.keyCode==40 && item<options.length-1) this.setState({item: item+1});
+		if(e.keyCode==13 && item>=0 && item<options.length-1) onChange({target: {id, value: options[item]}});
+
+	}
+
+	render(){
+		const{className, id, onSelect, value} =this.props;
+		const{isOpen} = this.state;
+		return(
+			<div className={"dropdown"}>
+				<div className="select" onClick={e => e.querySelector(`#${id}`).focus()}>
+					<input 
+						type="text" 
+						readOnly 
+						onFocus={this.focus.bind(this)} 
+						onKeyDown={this.keyDownChange.bind(this)}
+						value={value.label}
+						id={id}
+						onBlur={() => setTimeout(this.focus.bind(this), 150)}
+					/>
+					<Icon type="arrowBold" />
+				</div>
+				{this.openDropDown()}
+
+			</div>
 		);
 	}
 
 }
 
 DropDown.PropTypes={
-
-	className: PropTypes.string.isRequired,
+	className: PropTypes.string,
 	id: PropTypes.string,
 	onSelect: PropTypes.func
 };

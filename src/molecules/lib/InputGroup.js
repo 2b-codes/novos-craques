@@ -8,7 +8,9 @@ export default class InputGroup extends Component {
 		return(
 			<div className={`input-group ${className}`}>
 				<label htmlFor={id}>{label}</label>
-				<div className="input-group-children">{children}</div>
+				<div className="input-group-children">
+					{children}
+				</div>
 			</div>
 		);
 	}
