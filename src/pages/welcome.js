@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { ProgressForm, AboutUs } from "../molecules";
+
+import { SubHeader } from "../organisms";
 
 export default  class Welcome extends Component{ 
 
@@ -12,9 +13,10 @@ export default  class Welcome extends Component{
 
 		return(
 			<div>
-				
-				<Coursel type="downArrow" children={this.children()} infinit />
-				
+				<SubHeader 
+					pictureProfile="https://avatars2.githubusercontent.com/u/17505453?v=4&s=40" 
+					newVideoAction={()=> console.log("novo video")}
+				/>
 			</div>
 		);
 
