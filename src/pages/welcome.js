@@ -29,6 +29,10 @@ export default  class Welcome extends Component{
 					text={"depoimento hdiauhsdiahsd "}
 					
 				/>
+				<AboutUs 
+					subtitle="SUBTITLE"
+					text="TEXTO LOKO TEXTO LOKO TEXTO LOKO TEXTO LOKO TEXTO LOKO TEXTO LOKO "
+				/>
 
 			</div>
 		);
