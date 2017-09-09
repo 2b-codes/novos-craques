@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
 import { SubHeader } from "../organisms";
+import { MenuProfile } from "../organisms";
 
 export default  class Welcome extends Component{ 
 
@@ -13,9 +13,8 @@ export default  class Welcome extends Component{
 
 		return(
 			<div>
-				<SubHeader 
-					pictureProfile="https://avatars2.githubusercontent.com/u/17505453?v=4&s=40" 
-					newVideoAction={()=> console.log("novo video")}
+				<MenuProfile 
+					profilePicture="https://trello-avatars.s3.amazonaws.com/949255df913920b06242fbfcda8af71e/30.png"
 				/>
 			</div>
 		);
