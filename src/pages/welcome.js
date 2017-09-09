@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { ProgressForm, AboutUs } from "../molecules";
+
+import { MenuProfile } from "../organisms";
 
 export default  class Welcome extends Component{ 
 
@@ -12,9 +13,9 @@ export default  class Welcome extends Component{
 
 		return(
 			<div>
-				
-				<Coursel type="downArrow" children={this.children()} infinit />
-				
+				<MenuProfile 
+					profilePicture="https://trello-avatars.s3.amazonaws.com/949255df913920b06242fbfcda8af71e/30.png"
+				/>
 			</div>
 		);
 

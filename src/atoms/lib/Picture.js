@@ -6,11 +6,11 @@ export default class Picture extends Component {
 	render() {
 		const{ src, onClick, className, id }=this.props;
 		return(
-			<div className="box-picture">
+			<div className={`box-picture ${className}`}>
 			<img 
 				src={src}
 				onClick={onClick}
-				className={`picture ${className}`}
+				className="picture"
 				id={id}
 			/>
 			</div>
