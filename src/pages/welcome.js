@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ProgressForm, AboutUs } from "../molecules";
+import { LoginForm } from "../organisms";
 
 export default  class Welcome extends Component{ 
 
@@ -13,7 +13,7 @@ export default  class Welcome extends Component{
 		return(
 			<div>
 				
-				<Coursel type="downArrow" children={this.children()} infinit />
+				<LoginForm errors={[]} values={[]} submit={()=> ""} handleChange={() => console.log("CLiquei")} />
 				
 			</div>
 		);
