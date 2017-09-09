@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { SubHeader } from "../organisms";
 import { MenuProfile } from "../organisms";
+import { LoginForm } from "../organisms";
 
 export default  class Welcome extends Component{ 
 
@@ -13,9 +14,7 @@ export default  class Welcome extends Component{
 
 		return(
 			<div>
-				<MenuProfile 
-					profilePicture="https://trello-avatars.s3.amazonaws.com/949255df913920b06242fbfcda8af71e/30.png"
-				/>
+				<LoginForm errors={[]} values={[]} submit={()=> ""} handleChange={() => console.log("CLiquei")} />
 			</div>
 		);
 

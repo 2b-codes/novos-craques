@@ -7,6 +7,7 @@ import AboutUs from "./lib/AboutUs";
 import NumberLikes from "./lib/NumberLikes";
 import TitleAndSubtitle from "./lib/TitleAndSubtitle";
 import CardDepoiment from "./lib/CardDepoiment";
+import InputGroup from "./lib/InputGroup";
 
 
 export {
@@ -19,4 +20,5 @@ export {
 	NumberLikes,
 	ButtonIcon,
 	CardDepoiment,
+	InputGroup
 };
