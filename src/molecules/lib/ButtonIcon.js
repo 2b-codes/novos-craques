@@ -5,13 +5,13 @@ import { Button, Icon } from "../../atoms";
 
 export default class ButtonIcon extends Component {
 	renderButton() {
-		const { left, onClick, label, iconType, typeButton } = this.props;
+		const { id, className, left, onClick, label, iconType, typeButton } = this.props;
 
 		if(left)
 			return( 
 				<Button
-					className={"IconButton"}
-					id={"IconButton"}
+					id={id} 
+					className={`button-icon ${className}`}
 					type={typeButton}
 					onClick={onClick}
 				>
@@ -22,8 +22,8 @@ export default class ButtonIcon extends Component {
 		else
 			return (
 				<Button
-					className={"IconButton"}
-					id={"IconButton"}
+					id={id} 
+					className={`button-icon ${className}`}
 					type={typeButton}
 					onClick={onClick}
 				>
@@ -35,11 +35,7 @@ export default class ButtonIcon extends Component {
 
 	render() {
 		const { id, className } = this.props;
-		return(
-			<div id={id} className={`button-icon ${className}`}>
-				{this.renderButton()}
-			</div>
-		);
+		return(this.renderButton());
 	}
 }
 

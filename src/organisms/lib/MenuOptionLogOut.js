@@ -18,7 +18,7 @@ export default class MenuOptionLogout extends Component{
 					/>
 					<span>home</span>
 					
-				</div>
+				
 				
 				<div>
 					<Icon

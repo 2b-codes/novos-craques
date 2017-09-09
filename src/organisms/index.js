@@ -1,10 +1,13 @@
-
 import Coursel from "./lib/Coursel";
-import MenuOption from "./lib/MenuOptionLogin";
-import MenuOption from "./lib/MenuOptionLogOut";
+import MenuOptionLogin from "./lib/MenuOptionLogin";
+import MenuOptionLogOut from "./lib/MenuOptionLogOut";
+import SubHeader from "./lib/SubHeader";
+import MenuProfile from "./lib/MenuProfile";
 
 export {
 	Coursel,
 	MenuOptionLogin,
-	MenuOptionLogOut
+	MenuOptionLogOut,
+	SubHeader,
+	MenuProfile
 };
