@@ -15,7 +15,7 @@ export default class Subtitle extends Component {
 	}
 
 	render() {
-		return (this.renderSubTitle());
+		return (this.renderSubtitle());
 	}
 }
 

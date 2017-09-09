@@ -1,4 +1,3 @@
-//
 import BackgroundImage from "./lib/BackgroundImage";
 import Button from "./lib/Button";
 import Checkbox from "./lib/Checkbox";
