@@ -8,7 +8,10 @@ export default class Icon extends Component {
 	render() {
 		const { type, clickAction, id, className } = this.props;
 		return (
-			<svg id={id} onClick={clickAction} className={`icon ${className}`}>
+			<svg 
+				id={id} 
+				onClick={clickAction} 
+				className={`icon ${className} ${ clickAction ? "--pointer" : ""}`}>
 				{icons[type]}
 			</svg>
 		);
