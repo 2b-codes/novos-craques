@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { ProgressForm, AboutUs } from "../molecules";
+
+
+import { HomeTemplate } from "../templates";
 
 export default  class Welcome extends Component{ 
 
@@ -12,9 +14,7 @@ export default  class Welcome extends Component{
 
 		return(
 			<div>
-				
-				<Coursel type="downArrow" children={this.children()} infinit />
-				
+				<HomeTemplate />			
 			</div>
 		);
 
