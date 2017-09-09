@@ -1,20 +1,18 @@
 import React, { Component } from "react";
-import { ProgressForm, AboutUs } from "../molecules";
+
+import { MenuOption,Subtitle } from "../organisms";
 
 export default  class Welcome extends Component{ 
-
-	constructor(props){ 	
-		super(props);
-
-		
-	};
+	
 	render(){
 
 		return(
 			<div>
+				<MenuOption value={"teste"}
+					src="https://pbs.twimg.com/profile_images/147706634/Picture_001_400x400.jpg"/>	
+
 				
-				<Coursel type="downArrow" children={this.children()} infinit />
-				
+
 			</div>
 		);
 

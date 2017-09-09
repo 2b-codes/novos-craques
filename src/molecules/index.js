@@ -9,6 +9,7 @@ import TitleAndSubtitle from "./lib/TitleAndSubtitle";
 import CardDepoiment from "./lib/CardDepoiment";
 
 
+
 export {
 	ProfileImageName,
 	SearchBar,
@@ -19,4 +20,7 @@ export {
 	NumberLikes,
 	ButtonIcon,
 	CardDepoiment,
+	
+	
+
 };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Subtitle } from "../../atoms";
+import { Subtitle } from "../../lib/aboutUs.js";
 
 export default class AboutUs extends Component {
 
