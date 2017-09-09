@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import { ProgressForm, AboutUs } from "../molecules";
 
-export default  class Welcome extends Component { 
+export default  class Welcome extends Component{ 
 
 	constructor(props){ 	
 		super(props);
+
+		
 	};
-	
 
 	render(){
 

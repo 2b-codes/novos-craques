@@ -16,7 +16,7 @@ export default class CardMotivation extends Component {
 					id={"motivation-image"}
 				/>
 				<div className="card-texts">
-					<SubTitle
+					<Subtitle
 						children={subtitle}
 						className={"subtitle"}
 						id={"cardMotivationSubtitle"}
