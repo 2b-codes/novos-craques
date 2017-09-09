@@ -8,12 +8,13 @@ export default  class Welcome extends Component{
 
 		
 	};
-
 	render(){
 
 		return(
 			<div>
-				WELCOME
+				
+				<Coursel type="downArrow" children={this.children()} infinit />
+				
 			</div>
 		);
 
