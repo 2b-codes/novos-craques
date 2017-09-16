@@ -1,5 +1,5 @@
-import HomeTemplate from "./lib/HomeTemplate";
+import Informations from "./lib/Informations";
 
 export {
-	HomeTemplate
+	Informations
 };

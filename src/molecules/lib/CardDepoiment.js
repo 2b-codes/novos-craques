@@ -12,7 +12,8 @@ export default class CardDepoiment extends Component{
 			id,
 			text,
 			subtitle,
-			alt
+			alt,
+			date
 		} = this.props;
 
 		return(
@@ -28,6 +29,11 @@ export default class CardDepoiment extends Component{
 						className="subtitle"
 						id={id}
 						children={subtitle}
+					/>
+					<Subtitle 
+						className="date"
+						id={id}
+						children={`data: ${date}`}
 					/>
 					<div className="depoiment-text">
 						{text}
