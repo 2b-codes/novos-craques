@@ -53,13 +53,7 @@ export default class Coursel extends Component {
 }
 
 Coursel.PropTypes={
-
-	src: PropTypes.string,
-	onClick: PropTypes.func,
 	className: PropTypes.string.isRequired,
-	children : PropTypes.string.isRequired,
-	id: PropTypes.string.isRequired,
-	value: PropTypes.string.isRequired,
-	text:  PropTypes.string.isRequired,
-	placeholder: PropTypes.string.isRequired,
+	children: PropTypes.array.isRequired,
+	infinit: PropTypes.bool
 };
