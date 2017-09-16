@@ -60,7 +60,7 @@ export default class Informations extends Component {
 		return(
 			<div className={`informations ${className}`}>
 				{this.renderCardMotivation()}
-				<Subtitle className="carousel-title">O que dizem sobre nós:</Subtitle>
+				<Subtitle id="i" className="carousel-title">O que dizem sobre nós:</Subtitle>
 				<Coursel 
 					className="informations-carousel"
 					children={this.renderCardDepoiment()}
