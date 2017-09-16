@@ -7,6 +7,8 @@ import AboutUs from "./lib/AboutUs";
 import NumberLikes from "./lib/NumberLikes";
 import TitleAndSubtitle from "./lib/TitleAndSubtitle";
 import CardDepoiment from "./lib/CardDepoiment";
+import InputGroup from "./lib/InputGroup";
+import WrapperModal from "./lib/WrapperModal";
 
 
 
@@ -20,7 +22,5 @@ export {
 	NumberLikes,
 	ButtonIcon,
 	CardDepoiment,
-	
-	
-
+	WrapperModal
 };

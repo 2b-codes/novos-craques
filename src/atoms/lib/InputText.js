@@ -4,7 +4,15 @@ import PropTypes from "prop-types";
 export default class InputText extends Component {
 
 	render() {
-		const{ className, id, onChange, value, placeholder }= this.props;
+		const{
+			className,
+			id,
+			onChange,
+			value,
+			placeholder,
+			type 
+		}= this.props;
+
 		return(
 			// os ${}  concatena string,  entre as chaves é string 
 			// antes do cifrão é variavel NÃO ESQUECER ASPAS INVERTIDA
@@ -15,7 +23,7 @@ export default class InputText extends Component {
 				onChange={onChange}
 				value={value} 
 				placeholder={placeholder}
-				type="text" 
+				type={type || "text"} 
 			/>
 		);
 	}

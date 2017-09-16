@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { Picture, SubTitle } from "../../atoms";
+import { Picture, Subtitle } from "../../atoms";
 
 export default class CardMotivation extends Component {
 

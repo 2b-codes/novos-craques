@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 export default class InputGroup extends Component {
 
 	render() {
-		const { children, label, className } = this.props;
+		const { children, label, className, id } = this.props;
 		return(
 			<div className={`input-group ${className}`}>
-				<label htmlFor={id}>{label}</label>
+				<label className="label-input-group" htmlFor={id}>{label}</label>
 				<div className="input-group-children">
 					{children}
 				</div>

@@ -15,7 +15,7 @@ export default class AboutUs extends Component {
 				>
 					{subtitle}
 				</Subtitle>
-				<p className= {`text ${className}`}>
+				<p className= "text">
 					{text}
 				</p>
 			</div>
