@@ -6,6 +6,7 @@ import avatar from "./lib/avatar";
 import menu from "./lib/menu";
 import checked from "./lib/checked";
 import downArrow from "./lib/downArrow";
+import downArrowWhite from "./lib/downArrowWhite";
 import close from "./lib/close";
 import circularChecked from "./lib/circularChecked";
 import arrowBold from "./lib/arrowBold";
@@ -45,5 +46,6 @@ export default {
 	circleSelected,
 	circle,
 	arrowUpDown,
-	calendar
+	calendar,
+	downArrowWhite
 };
