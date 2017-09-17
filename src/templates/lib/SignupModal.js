@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { InputText } from "../../atoms";
-import { WrapperModal , InputGroup } from "../../molecules";
-
+import { connect } from "react-redux";
+import {WrapperModal, closeModal} from"../../molecules";
 
 
 class SignupModal extends Component{
@@ -13,19 +13,19 @@ class SignupModal extends Component{
  	}
 
 	render(){
+
+		console.log(this);
 		return(
 			<WrapperModal show={this.props.show}>khdaisdhaksjdhiasuhdkjnijk </WrapperModal>
 		);
-
 	}
 }
 const map = (state)=>{
 	return{
 		show: state.modal.showSignupModal,
-
 	};
 };
 
-export default connect(map, {})(SignupModal);
+export default connect(map, {closeModal})(SignupModal);
 
 

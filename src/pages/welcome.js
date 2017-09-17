@@ -1,14 +1,18 @@
 import React, { Component } from "react";
-import{ PersonalInfoForm} from  "../templates";
+import{ PersonalInfoForm, SignupModal} from  "../templates";
+import { connect } from "react-redux";
+import { openSignupModal } from "../actions";
 
-export default  class Welcome extends Component{ 
+class Welcome extends Component{ 
 	
 	render(){
 		return(
 			<div>
-				<PersonalInfoForm values={{}	}/>
+				<SignupModal/>
+				<button onClick={this.props.openSignupModal}> texto</button>
 			</div>
 		);
 
 	}
 }
+export default connect(null, {openSignupModal})(Welcome);

@@ -9,8 +9,7 @@ import TitleAndSubtitle from "./lib/TitleAndSubtitle";
 import CardDepoiment from "./lib/CardDepoiment";
 import InputGroup from "./lib/InputGroup";
 import WrapperModal from "./lib/WrapperModal";
-
-
+import Paginator from "./lib/Paginator";
 
 export {
 	ProfileImageName,
@@ -22,5 +21,7 @@ export {
 	NumberLikes,
 	ButtonIcon,
 	CardDepoiment,
-	WrapperModal
+	WrapperModal,
+	InputGroup,
+	Paginator
 };

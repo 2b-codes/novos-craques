@@ -8,24 +8,24 @@ export default class WrapperModal extends Component {
 		super(props);
 		this.state = {
 			closing: false,
-			visible: false
+			show: false
 		};
 	}
 
 	componentWillMount() {
-		if(this.props.visible)
-			this.setState({ visible: true });
+		if(this.props.show)
+			this.setState({ show: true });
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if(this.props.visible && !nextProps.visible) {
+		if(this.props.show && !nextProps.show) {
 			this.setState({ closing: true });
 			setTimeout(() => { 
-				if(!this.props.visible) 
-					this.setState({ visible: false }); 
+				if(!this.props.show) 
+					this.setState({ show: false }); 
 			}, 300);
-		} else if(nextProps.visible) {
-			this.setState({ visible: true, closing: false });
+		} else if(nextProps.show) {
+			this.setState({ show: true, closing: false });
 		}
 	}
 

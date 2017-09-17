@@ -33,5 +33,6 @@ InputText.propTypes = {
 	className: PropTypes.string,
 	id: PropTypes.string.isRequired,
 	onChange: PropTypes.func.isRequired,
+	value: PropTypes.string.isRequired
 };
 
