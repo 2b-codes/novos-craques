@@ -30,12 +30,12 @@ export default class WrapperModal extends Component {
 	}
 
 	render() {
-		const { visible, closing } = this.state;
+		const { show, closing } = this.state;
 		const { title, children, id, color, disabledClose, closeModal, type } = this.props;
 		
 		return (
 			<section
-				className={`wrapper-modal ${ this.state.closing ? "closing" : "" } ${visible || "--hide"} ${!color || `--${color}`}`}
+				className={`wrapper-modal ${ this.state.closing ? "closing" : "" } ${show || "--hide"} ${!color || `--${color}`}`}
 				id={id}
 				onClick={closeModal}
 			>
@@ -61,7 +61,7 @@ export default class WrapperModal extends Component {
 WrapperModal.propTypes = {
 	title: PropTypes.node,
 	children: PropTypes.element.isRequired,
-	visible: PropTypes.bool,
+	show: PropTypes.bool,
 	id: PropTypes.string,
 	disabledClose: PropTypes.bool,
 	closeAction: PropTypes.func,
