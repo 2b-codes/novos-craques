@@ -2,17 +2,18 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {Icon} from "../../atoms";
 
+
 export default class Paginator extends Component{
 
 	render(){
-		const{className,nextAction, prevAction}= this.props;
+		const{className,navigationAction, step}= this.props;
 		return(
 			<div className= {`paginator ${className}`}>
-				<div className="container-prev" onClick={prevAction}> 
+				<div className="container-prev" onClick={() => navigationAction(step -1)}> 
 					<Icon type="downArrow" id="seta" className="prev" />
 					<span>Lance Aneterior</span>
 				</div>
-				<div className="container-next"onClick={nextAction}>
+				<div className="container-next"onClick={() => navigationAction(step +1)}>
 					<span>Próximo Lance</span>
 					<Icon type="downArrow" id="seta" className="next"/>
 				</div>
@@ -25,6 +26,6 @@ export default class Paginator extends Component{
 
 Paginator.propTypes={
 	className: PropTypes.string.isRequired,
-	nextAction:PropTypes.func.isRequired,
-	prevAction: PropTypes.func.isRequired,
+	
+	navigationAction: PropTypes.func.isRequired,
 };

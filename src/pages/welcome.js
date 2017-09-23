@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import{ PersonalInfoForm, SignupModal} from  "../templates";
+import{  AdditionalInformation } from  "../organisms";
+import {SignupModal} from "../templates";
+import {openSignupModal} from "../actions";
 import { connect } from "react-redux";
-import { openSignupModal } from "../actions";
+
 
 class Welcome extends Component{ 
 	
