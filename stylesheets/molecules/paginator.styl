@@ -1,0 +1,24 @@
+.paginator
+	
+	>.container-prev
+		display inline-block
+		float left
+		cursor pointer
+		>.prev
+			transform rotate(90deg)
+	>.container-next	
+		display inline-block
+		float right
+		cursor pointer
+		>.next
+			transform rotate(270deg)
+			&.noRotate
+				transform rotate(0deg)
+	>.container-prev
+	>.container-next	
+		>.next
+		>.prev
+			width 30px
+			height 30px
+			vertical-align middle
+			

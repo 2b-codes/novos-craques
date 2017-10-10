@@ -1,7 +1,12 @@
 import React, { Component } from "react";
-import{ PersonalInfoForm} from  "../templates";
+import { connect } from "react-redux";
 
-export default  class Welcome extends Component{ 
+import { openSignupModal, showSuccessModalAction } from "../actions";
+import { AdditionalInformation } from  "../organisms";
+import {SignupModal, Loading, SuccessModal} from "../templates";
+import {Icon, Button} from "../atoms";
+
+class Welcome extends Component{ 
 
 	constructor(props){
 		super(props);
@@ -24,6 +29,10 @@ export default  class Welcome extends Component{
 	render(){
 		return(
 			<div className={`aqui ${this.state.fullscreen ? "--fullscreen" : ""}`}>
+				<Loading />
+				<SuccessModal />
+				<SignupModal/>
+				<Button onClick={this.props.openSignupModal}> Cadastrar-se</Button>
 				<div className={`iVideo ${this.state.fullscreen ? "--fullscreen" : ""}`}>
 					<iframe
 						className={`SALVE ${this.state.fullscreen ? "--fullscreen" : ""}`}
@@ -39,3 +48,4 @@ export default  class Welcome extends Component{
 
 	}
 }
+export default connect(null, {openSignupModal, showSuccessModalAction})(Welcome);

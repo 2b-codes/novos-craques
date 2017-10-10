@@ -22,6 +22,8 @@ import circleSelected from "./lib/circleSelected";
 import circle from "./lib/circle";
 import arrowUpDown from "./lib/arrowUpDown";
 import calendar from "./lib/calendar";
+import ball from "./lib/ball";
+import goal from "./lib/goal";
 
 export default {
 	about,
@@ -47,5 +49,7 @@ export default {
 	circle,
 	arrowUpDown,
 	calendar,
-	downArrowWhite
+	downArrowWhite,
+	ball,
+	goal
 };

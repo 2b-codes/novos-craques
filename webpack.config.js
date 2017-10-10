@@ -3,6 +3,7 @@ const UglifyJS = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     './src/index'
   ],
   devtool: 'cheap-module-source-map',

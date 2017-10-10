@@ -8,34 +8,34 @@ export default class WrapperModal extends Component {
 		super(props);
 		this.state = {
 			closing: false,
-			visible: false
+			show: false
 		};
 	}
 
 	componentWillMount() {
-		if(this.props.visible)
-			this.setState({ visible: true });
+		if(this.props.show)
+			this.setState({ show: true });
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if(this.props.visible && !nextProps.visible) {
+		if(this.props.show && !nextProps.show) {
 			this.setState({ closing: true });
 			setTimeout(() => { 
-				if(!this.props.visible) 
-					this.setState({ visible: false }); 
-			}, 300);
-		} else if(nextProps.visible) {
-			this.setState({ visible: true, closing: false });
+				if(!this.props.show) 
+					this.setState({ show: false }); 
+			}, 450);
+		} else if(nextProps.show) {
+			this.setState({ show: true, closing: false });
 		}
 	}
 
 	render() {
 		const { show, closing } = this.state;
-		const { title, children, id, color, disabledClose, closeModal, type } = this.props;
+		const { title, children, id, color, disabledClose, closeModal, type, className, classNameBody } = this.props;
 		
 		return (
 			<section
-				className={`wrapper-modal ${ this.state.closing ? "closing" : "" } ${show || "--hide"} ${!color || `--${color}`}`}
+				className={`wrapper-modal ${ this.state.closing ? "closing" : "" } ${show || "-hide"} ${className}`}
 				id={id}
 				onClick={closeModal}
 			>
@@ -44,12 +44,12 @@ export default class WrapperModal extends Component {
 						title ?
 						<header className="header">
 							<Title type="h2">{title}</Title>
-							<span onClick={closeModal} className={`close ${ !disabledClose || "--hide" }`}>
+							<span onClick={closeModal} className={`close ${ !disabledClose || "-hide" }`}>
 								<Icon type="close" clickAction={closeModal} />
 							</span>
 						</header> : null
 					}
-					<main className="main">
+					<main className={`main ${classNameBody}`}>
 						{children}
 					</main>
 				</div>
@@ -64,6 +64,6 @@ WrapperModal.propTypes = {
 	show: PropTypes.bool,
 	id: PropTypes.string,
 	disabledClose: PropTypes.bool,
-	closeAction: PropTypes.func,
+	closeModal: PropTypes.func,
 	color: PropTypes.string
 };

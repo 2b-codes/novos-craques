@@ -4,6 +4,10 @@ import MenuOptionLogOut from "./lib/MenuOptionLogOut";
 import SubHeader from "./lib/SubHeader";
 import MenuProfile from "./lib/MenuProfile";
 import LoginForm from "./lib/LoginForm";
+// Modal Signup
+import AdditionalInformation from "./lib/AdditionalInformation";
+import PersonalInfoForm from "./lib/PersonalInfoForm";
+import ConfirmationStep from "./lib/ConfirmationStep";
 
 export {
 	Coursel,
@@ -11,5 +15,8 @@ export {
 	MenuOptionLogOut,
 	SubHeader,
 	MenuProfile,
-	LoginForm
+	LoginForm,
+	AdditionalInformation,
+	PersonalInfoForm,
+	ConfirmationStep
 };

@@ -24,6 +24,7 @@ export default class InputDate extends Component {
 			onFocus,//Função para fazer algo no facus
 			viewMode,// "day", "year" e etc..
 			open,//Mostrar já aberto(true), ou mostrar apenas quando dar focus no input(false)
+			id
 
 		}=this.props;
 
@@ -43,7 +44,7 @@ export default class InputDate extends Component {
 			viewMode,
 			open: open,
 		};
-		const input = noInput ? {className: `input-date --noInput ${className}`} : null;
+		const input = noInput ? {className: `input-date -noInput ${className}`, id: {id}} : null;
 		return(
 			<div className={input ? null : `input-date  ${className}`}>
 				<Datetime { ...dateProps } {...input}/>
@@ -54,7 +55,7 @@ export default class InputDate extends Component {
 }
 
 InputDate.propTypes = {
-	onClick: PropTypes.func.isRequired,
-	value: PropTypes.func.isRequired,
+	onClick: PropTypes.func,
+	value: PropTypes.func,
 	className: PropTypes.string
 };
