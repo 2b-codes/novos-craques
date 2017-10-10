@@ -2,10 +2,19 @@
 	position fixed
 	width 100%
 	height 100vh
-	background-color rgba(black, .6)
-	z-index 100
+	background-color rgba(black, .7)
+	z-index 1
+	will-change opacity
 	&.closing
-		fade("out", 0.3s)
+		margin 0 4px
+		-webkit-animation fadout .5s  
+		animation fadout .5s 
+		>.modal
+			-webkit-animation rotate .5s  
+			animation rotate .5s 
+			will-change transform
+		
+		
 
 	> .modal 
 		position relative
@@ -13,8 +22,8 @@
 		top: 50%
 		transform: translateY(-50%) 
 		width 420px
-		max-height 90vh
-		max-width 420px
+		max-height 100vh
+		max-width 100%
 		background-color white
 		z-index 101
 		fade("in", .3s)
@@ -23,10 +32,12 @@
 		> .header
 			padding 30px
 			position relative
+			background-color: $orange-light
 			
-			> .text.--title
-				font-size 1em
-				color $light-black
+			> .title-page
+				font-size 1.5em
+				color #FFF
+				font-weight 400
 				
 			> .close
 				position absolute
@@ -37,7 +48,7 @@
 					width 25px
 					height 25px
 				
-				&.--hide
+				&.-hide
 					display none
 		
 		> .main
@@ -46,19 +57,82 @@
 			max-height calc(90vh - 80px)
 			overflow-y auto
 			scroll($dark-grey)
-	
-	&.--hide
+			
+		@media screen and (max-width:992px)
+			position relative
+			margin auto
+			top 45%
+			transform: translateY(-50%) 
+			width 350px
+			max-height 80vh
+			max-width 100%
+			background-color white
+			z-index 101
+			fade("in", .3s)
+			shadow()
+			
+			> .header
+				padding 30px
+				position relative
+				background-color: $orange-light
+				
+				> .title-page
+					font-size 1.5em
+					color #FFF
+					font-weight 400
+					vertical-align middle
+					
+				> .close
+					position absolute
+					top 20px
+					right 20px
+					cursor pointer
+					vertical-align middle
+					>.icon
+						width 25px
+						height 25px
+						vertical-align middle
+					
+					&.-hide
+						display none
+			> .main
+				position relative
+				padding 0 30px 30px 30px
+				max-height calc(80vh - 90px)
+				overflow-y auto
+				scroll($dark-grey)
+		
+			
+	&.-hide
 		display none
 
-	&.--error
+	&.-error
 		> .modal
 			background-color $error
 
-	&.--red
+	&.-red
 		> .modal 
 			background-color $error
 			
-	&.--green
+	&.-green
 		> .modal
 			background-color $green
 			color #FFF
+	
+	@keyframes rotate {
+		0% {
+			transform: translate(0px, -50%)
+		}
+		100% {
+			transform: rotateZ(999deg) translate(-1000px, -50%) 
+		}
+	}
+	
+	@keyframes fadout {
+		0% {
+			opacity 1
+		}
+		100% {
+			opacity 0
+		}
+	}

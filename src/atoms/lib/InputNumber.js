@@ -26,18 +26,18 @@ export default class InputNumber extends Component {
 	}
 
 	render() {
-		const{ id, value, className, placeholder }= this.props;
+		const{ id, value, className, placeholder, icon }= this.props;
 		return(
 			<div className={`input-number ${className}`}>
 				<input 
 					type="tel" 
 					id={id} 
-					value={value || 0} 
+					value={value} 
 					onChange={this.validate.bind(this)}
 					placeholder={placeholder}
 					onKeyDown={this.keyDownChange.bind(this)}
 				/> 
-				<Icon type="arrowUpDown" />
+				{icon ? <Icon type="arrowUpDown" /> : null}
 			</div>
 		);
 	}

@@ -11,7 +11,7 @@ export default class Icon extends Component {
 			<svg 
 				id={id} 
 				onClick={clickAction} 
-				className={`icon ${className} ${ clickAction ? "--pointer" : ""}`}>
+				className={`icon ${className} ${ clickAction ? "-pointer" : ""}`}>
 				{icons[type]}
 			</svg>
 		);

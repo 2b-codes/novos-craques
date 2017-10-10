@@ -6,17 +6,27 @@ import {Icon} from "../../atoms";
 export default class Paginator extends Component{
 
 	render(){
-		const{className,navigationAction, step}= this.props;
+		const{ className,navigationAction, step, prevLabel, nextLabel }= this.props;
 		return(
 			<div className= {`paginator ${className}`}>
+				
 				<div className="container-prev" onClick={() => navigationAction(step -1)}> 
-					<Icon type="downArrow" id="seta" className="prev" />
-					<span>Lance Aneterior</span>
+					{
+						prevLabel ||
+							[
+								<Icon key={1} type="downArrow" id="seta" className="prev" />,
+								<span key={2}>Lance Aneterior</span>
+							]
+					}
 				</div>
-				<div className="container-next"onClick={() => navigationAction(step +1)}>
-					<span>Próximo Lance</span>
-					<Icon type="downArrow" id="seta" className="next"/>
-				</div>
+				
+				{
+					nextLabel ||
+					<div className="container-next"onClick={() => navigationAction(step +1)}>
+						<span>Próximo Lance</span>
+						<Icon type="downArrow" id="seta" className="next"/>
+					</div>
+				}
 			</div>
 
 
@@ -25,7 +35,6 @@ export default class Paginator extends Component{
 }
 
 Paginator.propTypes={
-	className: PropTypes.string.isRequired,
-	
+	className: PropTypes.string,
 	navigationAction: PropTypes.func.isRequired,
 };

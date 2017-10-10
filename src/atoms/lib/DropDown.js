@@ -55,7 +55,6 @@ export default class DropDown extends Component{
 	keyDownChange(e) {
 		const{ onChange, id, options }= this.props;
 		const { item } = this.state;
-		console.log(e.keyCode);
 		if(e.keyCode==38 && item>0) this.setState({item: item-1});
 		if(e.keyCode==40 && item<options.length-1) this.setState({item: item+1});
 		if(e.keyCode==13 && item>=0 && item<options.length-1) onChange({target: {id, value: options[item]}});
@@ -63,11 +62,11 @@ export default class DropDown extends Component{
 	}
 
 	render(){
-		const{className, id, onSelect, value} =this.props;
-		const{isOpen} = this.state;
+		const { className, id, onSelect, value } =this.props;
+		const { isOpen } = this.state;
 		return(
 			<div className={"dropdown"}>
-				<div className="select" onClick={e => e.querySelector(`#${id}`).focus()}>
+				<div className="select" onClick={e => {console.log(e.target); e.querySelector(`#${id}`).focus();}}>
 					<input 
 						type="text" 
 						readOnly 
@@ -90,6 +89,9 @@ export default class DropDown extends Component{
 DropDown.PropTypes={
 	className: PropTypes.string,
 	id: PropTypes.string,
-	onSelect: PropTypes.func
+	onSelect: PropTypes.func,
+	value: PropTypes.object,
+	onChange: PropTypes.func,
+	options:  PropTypes.array,
 };
 

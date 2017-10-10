@@ -7,7 +7,11 @@ export default class Button extends Component {
 
 		const{ children, onClick, className, id, type } = this.props;
 		return (
-			<button id={id} type={type} className={`button ${className}`} onClick={onClick}>{children}</button>
+			<table>
+				<tr>
+					
+				</tr>
+			</table>
 		);
 	}
 }
@@ -18,7 +22,7 @@ Button.propTypes = {
 	// especifica qual o valor espera para tratativa
 	children: PropTypes.string.isRequired,
 	onClick: PropTypes.func.isRequired,
-	id: PropTypes.string,
+	id: PropTypes.string.isRequired,
 	className: PropTypes.string,
 	type: PropTypes.string,
 };

@@ -10,20 +10,20 @@
 	float left
 
 for column in (1..$columns)
-	.col.--xs{column}
+	.col.-xs{column}
 		width ((column / $columns) * 100)%
 			
 for column in (1..$columns)
 	@media (min-width $screen-device-small)
-		.col.--sm{column}
+		.col.-sm{column}
 			width ((column / $columns) * 100)%
 
 for column in (1..$columns)
 	@media (min-width $screen-device-medium)
-		.col.--md{column}
+		.col.-md{column}
 			width ((column / $columns) * 100)%
 
 for column in (1..$columns)
 	@media (min-width $screen-device-large)
-		.col.--lg{column}
+		.col.-lg{column}
 			width ((column / $columns) * 100)%

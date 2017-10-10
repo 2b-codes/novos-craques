@@ -22,7 +22,7 @@ export default class Subtitle extends Component {
 
 Subtitle.propTypes={
 	children: PropTypes.string.isRequired,
-	id: PropTypes.string.isRequired,
+	id: PropTypes.string,
 	className: PropTypes.string,
 	type: PropTypes.string,
 };

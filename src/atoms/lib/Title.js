@@ -22,7 +22,7 @@ export default class Title extends Component {
 
 Title.propTypes = {
 	children: PropTypes.string.isRequired,
-	id: PropTypes.string.isRequired,
+	id: PropTypes.string,
 	className: PropTypes.string,
 	type: PropTypes.string,
 };
