@@ -16,7 +16,7 @@ export default class Button extends Component {
 
 Button.propTypes = {
 	// especifica qual o valor espera para tratativa
-	children: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
 	onClick: PropTypes.func.isRequired,
 	id: PropTypes.string,
 	className: PropTypes.string,

@@ -59,6 +59,7 @@ export default class Informations extends Component {
 
 		return(
 			<div className={`informations ${className}`}>
+				{this.renderAuboutUs()}
 				{this.renderCardMotivation()}
 				<Subtitle id="i" className="carousel-title">O que dizem sobre nós:</Subtitle>
 				<Coursel 
@@ -66,7 +67,6 @@ export default class Informations extends Component {
 					children={this.renderCardDepoiment()}
 					infinit
 				/>
-				{this.renderAuboutUs()}
 			</div>
 		);
 	}
@@ -75,5 +75,6 @@ export default class Informations extends Component {
 Informations.PropTypes = {
 	motivations: PropTypes.array.isRequired,
 	depoiments: PropTypes.array.isRequired,
+	aboutUs: PropTypes.array.isRequired,
 	className: PropTypes.string,
 };

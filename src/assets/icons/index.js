@@ -24,6 +24,8 @@ import arrowUpDown from "./lib/arrowUpDown";
 import calendar from "./lib/calendar";
 import ball from "./lib/ball";
 import goal from "./lib/goal";
+import exclamationRed from "./lib/exclamationRed";
+
 
 export default {
 	about,
@@ -51,5 +53,6 @@ export default {
 	calendar,
 	downArrowWhite,
 	ball,
-	goal
+	goal,
+	exclamationRed
 };

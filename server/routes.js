@@ -1,8 +1,8 @@
-import WelcomeController from "../src/requests/welcomeController";
+import HomeRequest from "../src/requests/HomeRequest";
 
 const routes = (app) => {
 
-	app.get("/", new WelcomeController().index);
+	app.get("/", new HomeRequest().index);
 
 };
 

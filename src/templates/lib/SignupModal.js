@@ -29,8 +29,18 @@ class SignupModal extends Component{
 			},
 			contStep:3,
 			currentStep:1,
-
-
+			errors: {
+				name: [],
+				last_name: [],
+				cell_phone: [],
+				email: [],
+				sex: [],
+				birthday: [],
+				username: [],
+				password: [],
+				confirm_password: [],
+				role: [],
+			}
  		};
  		this.controller=new SignupController(this);
 
@@ -55,8 +65,13 @@ class SignupModal extends Component{
 				/>
 			);
 
- 			case 3: return(<ConfirmationStep values={this.state.values}
-					onChange={this.controller.handleChange}/>);
+ 			case 3: return(
+ 				<ConfirmationStep 
+	 				values={this.state.values}
+					onChange={this.controller.handleChange}
+					errors={this.state.errors}
+					selectAction={this.controller.selectAction}
+			/>);
 
  		};
 

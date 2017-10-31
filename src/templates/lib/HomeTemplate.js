@@ -20,7 +20,7 @@ export default class HomeTemplate extends Component {
 				<div className="back-image">
 					<div className="basic-information">
 						<Title id="home-title" className="home-title">Novos Craques</Title>
-						<Subtitle id="home-subtitle" className="home-subtitle">Frase de efeito</Subtitle>
+						<Subtitle id="home-subtitle" className="home-subtitle">A evolução do seu sonho!</Subtitle>
 					</div>
 					<div className="more-information" onClick={learnMoreAction}>
 						<div><span className="learn-more">Saiba Mais</span></div>

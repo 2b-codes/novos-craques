@@ -23,7 +23,6 @@ export default class MainController{
 		const values = {...this.state.values};
 		
 		values["birthday"]=new Date(value);
-		console.log("SALVE", values);
 
 		this.setState({values});
 	}
