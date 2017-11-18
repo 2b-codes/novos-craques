@@ -82,7 +82,7 @@ class SignupModal extends Component{
 	render(){
 		const lastStep = (
 			<div className="container-next"onClick={this.controller.submit}>
-				<span>Finalizar</span>
+				<span>Finalizzzzzar</span>
 				<Icon type="ball" id="seta" className="next noRotate" />
 			</div>
 		);
