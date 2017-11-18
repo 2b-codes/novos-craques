@@ -14,7 +14,7 @@ export default class UsersRepository extends BaseRepository {
 	}
 
 	async get() {
-		const n = await this.resolvePromise(axios.get(`${"http://localhost:3000/api"}${"/users"}`));
+		const n = await this.resolvePromise(axios.get(`${"http://52.14.160.237:3000/api"}${"/users"}`));
 		return n;
 	}
 } 
