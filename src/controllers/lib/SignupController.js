@@ -21,7 +21,7 @@ export default class SignupController extends MainController {
 		if(n<1){
 			return;
 		}
-		else if(n>contStep){
+		else if(n>contStep){611
 			this.controller.submit();
 			return;
 		}
@@ -37,8 +37,7 @@ export default class SignupController extends MainController {
 		let errors = {...this.state.errors};
 		const toAPI = this.controller.mapToApi(values);
 
-		const promise = {error: {code: 611}}; //await this.controller.users.create(toAPI);
-
+		const promise = await this.controller.users.create(toAPI);
 		if(!promise.error){
 			this.props.closeModalAction();
 			this.props.showSuccessModalAction();
