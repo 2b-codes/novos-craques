@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { InputText, Subtitle, InputDate } from "../../atoms";
+import { InputText, Subtitle, InputDate, DropDown } from "../../atoms";
 import { InputGroup } from "../../molecules";
+import { sexModel } from "../../models";
 
 
 export default class AdditionalInformation extends Component{
@@ -12,7 +13,7 @@ export default class AdditionalInformation extends Component{
 			<div className="additional">
 				<Subtitle>Informações Adicionais</Subtitle>
 				<InputGroup id="sex" label="Sexo">
-					<InputText value={values["sex"]} id="sex" onChange={onChange}/>
+					<DropDown options={sexModel} value={values["sex"]} id="sex" onChange={onChange}/>
 				</InputGroup>
 				<InputGroup id="birttday" label="Nascimento">
 					<InputDate value={values["birttday"]} id="birttday" onChange={onDateChange}/>

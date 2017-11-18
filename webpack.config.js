@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 const UglifyJS = require('uglifyjs-webpack-plugin');
 
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV || "dev";
 
 const plugins = [];
 

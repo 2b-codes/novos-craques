@@ -6,7 +6,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const mmq = require("gulp-merge-media-queries");
 const plumber = require("gulp-plumber");
 
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV || "dev";
 
 gulp.task("default", ["style"], () => {
 	if(env == "dev") gulp.watch("stylesheets/**/*", ["style"]);

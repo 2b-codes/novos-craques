@@ -37,7 +37,7 @@ export default class SignupController extends MainController {
 		const toAPI = this.controller.mapToApi(values);
 
 		const promise = await this.controller.users.create(toAPI);
-		console.log(promise);
+
 		if(!promise.error){
 			this.props.closeLoadingAction();
 			this.props.closeModalAction();
@@ -58,7 +58,7 @@ export default class SignupController extends MainController {
 			last_name: values.last_name,
 			cell_phone: values.cell_phone,
 			email: values.email,
-			sex: values.sex,
+			sex: values.sex.id,
 			birthday: values.birthday,
 			username: values.username,
 			password: values.password,

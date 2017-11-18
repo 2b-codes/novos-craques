@@ -44,7 +44,7 @@ export default class ConfirmationStep extends Component {
 					</tr>
 					<tr onClick={() => selectAction("sex")}>
 						<td>Sexo</td>
-						<td>{values.sex || ""}</td> 
+						<td>{values.sex["label"] || ""}</td> 
 						<td>{errors["sex"][0] ? <Icon type="exclamationRed" /> : null}</td>
 					</tr>
 					<tr onClick={() => selectAction("birthday")}>

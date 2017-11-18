@@ -66,7 +66,7 @@ export default class DropDown extends Component{
 		const { isOpen } = this.state;
 		return(
 			<div className={"dropdown"}>
-				<div className="select" onClick={e => {console.log(e.target); e.querySelector(`#${id}`).focus();}}>
+				<div className="select" onClick={e => {document.querySelector(`#${id}`).focus();}}>
 					<input 
 						type="text" 
 						readOnly 
@@ -74,6 +74,7 @@ export default class DropDown extends Component{
 						onKeyDown={this.keyDownChange.bind(this)}
 						value={value.label}
 						id={id}
+						onCLick={(e)=> e.stopPropagation()}
 						onBlur={() => setTimeout(this.focus.bind(this), 150)}
 					/>
 					<Icon type="arrowBold" />
