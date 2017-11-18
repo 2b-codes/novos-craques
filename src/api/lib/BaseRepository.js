@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-const ROOT_URL = `${process.env.ROOT_URL || "http://localhost:3000"}/api`;
+const ROOT_URL = `${process.env.ROOT_URL || "http://52.14.160.237:3000"}/api`;
 
 export default class BaseRepository {
 
