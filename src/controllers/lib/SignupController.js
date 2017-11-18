@@ -38,13 +38,16 @@ export default class SignupController extends MainController {
 
 		const promise = await this.controller.users.create(toAPI);
 		if(!promise.error){
+			this.props.closeLoadingAction();
 			this.props.closeModalAction();
 			this.props.showSuccessModalAction();
 		}
-		errors = this.controller.verifyError(promise.error, errors);
-		this.setState({errors});
-		setTimeout(() => this.props.closeLoadingAction(), 1000);
 		
+		else {
+			errors = this.controller.verifyError(promise.error, errors);
+			this.setState({errors});
+			this.props.closeLoadingAction();
+		}
 
 	}
 
