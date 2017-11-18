@@ -21,8 +21,7 @@ export default class SignupController extends MainController {
 		if(n<1){
 			return;
 		}
-		else if(n>contStep){611
-			this.controller.submit();
+		else if(n>contStep){
 			return;
 		}
 		else {
