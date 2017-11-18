@@ -16,16 +16,16 @@ class SignupModal extends Component{
  		super(props);
  		this.state={
  			values:{
- 				name: "FIrst name",
-				last_name: "Last Name",
-				cell_phone: "234324",
-				email: "first@user.com",
-				sex:"M",
+ 				name: "",
+				last_name: "",
+				cell_phone: "",
+				email: "",
+				sex:"",
 				birthday: new Date(),
-				username: "username",
-				password: "12345",
-				confirm_password: "12345",
-				role: {id: "player", label: "Jogador"}
+				username: "",
+				password: "",
+				confirm_password: "",
+				role: {id: "", label: ""}
 			},
 			contStep:3,
 			currentStep:1,
