@@ -1,5 +1,15 @@
 const path = require('path');
+const webpack = require("webpack");
 const UglifyJS = require('uglifyjs-webpack-plugin');
+
+const env = process.env.NODE_ENV;
+
+const plugins = [];
+
+if (env != "dev") {
+  plugins.push(new webpack.optimize.UglifyJsPlugin({ compress: true }));
+  plugins.push(new webpack.EnvironmentPlugin(["ROOT_URL"]));
+}
 
 module.exports = {
   entry: [
@@ -19,7 +29,6 @@ module.exports = {
       include: path.join(__dirname, 'src')
     }]
   },
-  plugins: [
-  ],
-  watch: true
+  plugins,
+  watch: env == "dev"
 };

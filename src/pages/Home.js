@@ -2,29 +2,28 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { openSignupModal, showSuccessModalAction } from "../actions";
-import { AdditionalInformation } from  "../organisms";
 import { SignupModal, HomeTemplate, Informations } from "../templates";
-import { Icon, Button } from "../atoms";
 import { aboutUsModel, cardMotivationModel, cardDepoimentModel } from "../models";
+import { Icon, Button } from "../atoms";
+import { HomeController } from "../controllers";
 
 class Welcome extends Component{ 
 
 	constructor(props){
 		super(props);
 		this.state = {
-			fullscreen: false,
+			about: false,
 		};
+
+		this.controller = new HomeController();
 	}
 
-	renderSize() {
-		const width = window.screen.width;
-		const height = window.screen.height;
-		this.setState({fullscreen: !this.state.fullscreen});
-	}
-
-
-	changeColor() {
-		document.querySelector("#ytplayer").style.borderColor = "#CCC";
+	renderMore(){
+		return (
+			<div className="container">
+				<Informations motivations={cardMotivationModel} aboutUs={aboutUsModel} depoiments={cardDepoimentModel} className="" />
+			</div>
+		);
 	}
 	
 	render(){
@@ -35,10 +34,8 @@ class Welcome extends Component{
 					<img src="/assets/images/logo-x2.png"></img>
 					<Button onClick={this.props.openSignupModal} className="home-signup-action-button"><Icon type="ball"/> Cadastrar-se</Button>
 				</nav>
-				<HomeTemplate />
-				<div className="container">
-					<Informations motivations={cardMotivationModel} aboutUs={aboutUsModel} depoiments={cardDepoimentModel} className="" />
-				</div>
+				<HomeTemplate learnMoreAction={() =>this.setState({about: true})}/>
+				{this.state.about ? this.renderMore() : null}
 			</section>
 		);
 

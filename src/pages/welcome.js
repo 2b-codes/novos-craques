@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { openSignupModal, showSuccessModalAction } from "../actions";
 import { AdditionalInformation } from  "../organisms";
 import {SignupModal, Loading, SuccessModal} from "../templates";
-import {Icon, Button} from "../atoms";
+import { Button } from "../atoms";
 
 class Welcome extends Component{ 
 
@@ -35,7 +35,7 @@ class Welcome extends Component{
 				<Button onClick={this.props.openSignupModal}> Cadastrar-se</Button>
 				<div className={`iVideo ${this.state.fullscreen ? "--fullscreen" : ""}`}>
 					<iframe
-						className={`SALVE ${this.state.fullscreen ? "--fullscreen" : ""}`}
+						className={`${this.state.fullscreen ? "--fullscreen" : ""}`}
 						id="ytplayer"
 						type="text/html"
 						src="https://www.youtube.com/embed/QzRIPJMK6l8?cc_load_policy=1&controls=0&enablejsapi=1&loop=1&modestbranding=1&playsinline=1&rel=0&iv_load_policy=3"
