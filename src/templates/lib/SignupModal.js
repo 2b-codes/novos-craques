@@ -82,7 +82,7 @@ class SignupModal extends Component{
 	render(){
 		const lastStep = (
 			<div className="container-next"onClick={this.controller.submit}>
-				<span>Finalizzzzzar</span>
+				<span>Finalizar</span>
 				<Icon type="ball" id="seta" className="next noRotate" />
 			</div>
 		);
@@ -94,14 +94,14 @@ class SignupModal extends Component{
 				classNameBody="signup-modal-body"
 				closeModal={this.props.closeModalAction}
 			>
-				<div>
+				<div className="body-main">
 					{this.renderStep()}
-					<Paginator 
-						navigationAction={this.controller.navigationAction}
-						step={this.state.currentStep}
-						nextLabel={this.state.currentStep==this.state.contStep ? lastStep : null}
-					/>
 				</div>
+				<Paginator 
+					navigationAction={this.controller.navigationAction}
+					step={this.state.currentStep}
+					nextLabel={this.state.currentStep==this.state.contStep ? lastStep : null}
+				/>
 			</WrapperModal>
 		);
 	}

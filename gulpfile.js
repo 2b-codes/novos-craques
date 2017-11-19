@@ -3,8 +3,10 @@ const rename = require("gulp-rename");
 const stylus = require("gulp-stylus");
 const clean = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
+const postcss = require("gulp-postcss")
 const mmq = require("gulp-merge-media-queries");
 const plumber = require("gulp-plumber");
+const autoprefixer = require("autoprefixer");
 
 const env = process.env.NODE_ENV || "dev";
 
@@ -17,6 +19,7 @@ gulp.task("style", () => {
 	.pipe(plumber())
 	.pipe(sourcemaps.init())
 		.pipe(stylus({compress: true, "include css": true}))
+		.pipe(postcss([ autoprefixer() ]))
 		.pipe(mmq())
 		.pipe(clean())
 		.pipe(rename("bundle.min.css"))

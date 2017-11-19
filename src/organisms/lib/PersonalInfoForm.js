@@ -9,7 +9,7 @@ export default class PersonalInfoForm extends Component{
 	render(){
 		const { className, onChange, values, options, occupationOptions } = this.props;
 		return(
-			<div className="Personal">
+			<div className="personal">
 				<Subtitle>Informações Pessoais</Subtitle>
 				<InputGroup id="name" label="Nome">
 					<InputText value={values["name"]} id="name" onChange={onChange}/>
