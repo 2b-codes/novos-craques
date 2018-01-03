@@ -24,12 +24,17 @@
 			height 55px
 			// >.home-title
 			// 	margin
-		>.more-information
-			text-align center
-			position absolute
-			bottom 0
-			width 100%
-			.learn-more
-				cursor pointer
-				.icon
-					width 55px
+			
+		>.about-us
+			>.more-information
+				text-align center
+				position absolute
+				bottom 0
+				width 100%
+				.learn-more
+					cursor pointer
+					color #FFF
+					.icon
+						width 55px
+a[ id="aboutUsContainer" ]:target ~ #about-us article.aboutUs
+	transform: translateY( 134px );

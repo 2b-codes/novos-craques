@@ -7,7 +7,7 @@ export default class AboutUs extends Component {
 	render() {
 		const { className, id, subtitle, text, value } = this.props;
 		return(
-			<div className={`aboutUs ${ className }`}>
+			<article id="aboutUsContainer" className={`aboutUs ${ className }`}>
 				<Subtitle 
 					className="quem-somos"
 					id="subAbout"
@@ -18,7 +18,7 @@ export default class AboutUs extends Component {
 				<p className= "text">
 					{text}
 				</p>
-			</div>
+			</article>
 		);
 	}
 }

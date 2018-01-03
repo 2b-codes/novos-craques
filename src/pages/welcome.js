@@ -21,7 +21,6 @@ class Welcome extends Component{
 		this.setState({fullscreen: !this.state.fullscreen});
 	}
 
-
 	changeColor() {
 		document.querySelector("#ytplayer").style.borderColor = "#CCC";
 	}

@@ -1,38 +1,60 @@
 section.page-home
 	overflow-x hidden
+	transition-property all
+	
 	>.page-home-nav-bar
 		height 150px
 		width 100%
 		background-color: transparent
 		position absolute
-		padding 0 30px
+		padding 0 0 0 30px
+		
 		>img
 			height 130px
-		>.home-signup-action-button
+			
+		>.signup-group
 			display inline-block
 			float right
-			background-color $orange
-			color #FFF
-			font-weight 400
-			border none
-			border-radius 0 0 4px 4px
-			>.icon
-				height 20px
-				width 15px
-				margin auto
-				margin-right 5px
+			margin-top 20px
+			
+			>.flag
+				display inline-block
+				height 54px
+				width 54px
+				background-color #000
 				vertical-align middle
-				fill #FFF
-				stroke #FFF
-				>*
+				transform translateX(23px) rotate(45deg) 
+				
+			>.home-signup-action-button
+				padding 10px 10px 10px 40px
+				display inline-block
+				background-color $orange
+				color #FFF
+				font-weight 400
+				border none
+				border-radius 0
+				
+				>.icon
+					height 20px
+					width 15px
+					margin auto
+					margin-right 5px
+					vertical-align middle
 					fill #FFF
 					stroke #FFF
+					
+					>*
+						fill #FFF
+						stroke #FFF
+						
 	>.home-template
 		background-color: #000
+		
 		.basic-information
 			>.home-title
 				font-weight 600
 				font-size 2.2em
+				
 	>.container
 		padding 0 80px
 		@media screen and (max-width:992px)

@@ -22,10 +22,12 @@ export default class HomeTemplate extends Component {
 						<Title id="home-title" className="home-title">Novos Craques</Title>
 						<Subtitle id="home-subtitle" className="home-subtitle">A evolução do seu sonho!</Subtitle>
 					</div>
-					<div className="more-information" onClick={learnMoreAction}>
-						<div><span className="learn-more">Saiba Mais</span></div>
-						<span className="learn-more"><Icon type="downArrowWhite"/></span>
-					</div>
+					<a href="#aboutUsContainer" className="about-us">
+						<div className="more-information" onClick={learnMoreAction}>
+							<div><span className="learn-more">Saiba Mais</span></div>
+							<span className="learn-more"><Icon type="downArrowWhite"/></span>
+						</div>
+					</a>
 				</div>
 			</div>
 		);
