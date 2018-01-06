@@ -12,6 +12,8 @@ app.set("view engine", "ejs");
 
 routes(app);
 
+console.log("\n-----------\n\n\n", process.env.ROOT_URL, "\n-----------\n\n\n")
+
 app.listen(port, err => {
 	if(err) console.log(err);
 	else console.log(`Server online - Listening to port ${port}`);
