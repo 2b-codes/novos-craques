@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { InputText, Subtitle, InputNumber, InputEmail, DropDown } from "../../atoms";
 import { InputGroup } from "../../molecules";
+import { legModel } from "../../models";
 
 
 export default class PersonalInfoForm extends Component{
@@ -26,6 +27,13 @@ export default class PersonalInfoForm extends Component{
 				<InputGroup id="role" label="Sou">
 					<DropDown options={occupationOptions} value={values["role"]} id="role" onChange={onChange}/>
 				</InputGroup>
+				<InputGroup id="idolo" label="Meu idolo é">
+					<InputText value={values["idolo"]} id="idolo" onChange={onChange}/>
+				</InputGroup>
+				<InputGroup id="leg" label="Perna">
+					<DropDown options={legModel} value={values["leg"]} id="leg" onChange={onChange}/>
+				</InputGroup>
+
 			</div>
 		);
 	}
