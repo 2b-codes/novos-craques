@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import screenfull from "screenfull";
+
 
 import { openSignupModal, showSuccessModalAction } from "../actions";
 import { SignupModal, HomeTemplate, Informations } from "../templates";

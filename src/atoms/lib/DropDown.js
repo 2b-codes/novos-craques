@@ -62,12 +62,12 @@ export default class DropDown extends Component{
 	}
 
 	render(){
-		const { className, id, onSelect, value } =this.props;
+		const { className, id, onSelect, value, label } =this.props;
 		const { isOpen } = this.state;
 		return(
 			<div className={"dropdown"}>
 				<div className="select" onClick={e => {document.querySelector(`#${id}`).focus();}}>
-					<input 
+					<input
 						type="text" 
 						readOnly 
 						onFocus={this.focus.bind(this)} 
@@ -77,7 +77,7 @@ export default class DropDown extends Component{
 						onCLick={(e)=> e.stopPropagation()}
 						onBlur={() => setTimeout(this.focus.bind(this), 150)}
 					/>
-					<Icon type="arrowBold" />
+					<Icon type="arrowBold"/>
 				</div>
 				{this.openDropDown()}
 
@@ -89,6 +89,7 @@ export default class DropDown extends Component{
 
 DropDown.PropTypes={
 	className: PropTypes.string,
+	label: PropTypes.string,
 	id: PropTypes.string,
 	onSelect: PropTypes.func,
 	value: PropTypes.object,
