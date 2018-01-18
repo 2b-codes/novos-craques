@@ -13,17 +13,17 @@ export default [
 		pictureAlt:"alt",
 		clickAction:() => "", //Não deixar o onClick aqui
 		id:"2",
-		subtitle:"pergunta?/titulo",
-		text:"texto",
-		date:"20/20/020",
+		subtitle:"Porque entrei no projeto ?",
+		text:"Quando criança tinha o sonho de ser um jogador, amava ver Ronaldo fenomeno jogar. Não abandonei o sonho mas estou velho pra isso. Depois de grande me apaixonei pela técnologia que existe pra romper barreiras e facilitar acessos, então porque não usar minha paixão para realizar sonhos?",
+		date:"17/01/2018",
 	},
-	// {
-	// 	pictureSrc:"https://scontent.fcgh5-1.fna.fbcdn.net/v/t1.0-9/395525_10150534486633023_162600351_n.jpg?oh=dbd2580cf791c1c51512da0cda0bf17e&oe=5A6C16D9",
-	// 	pictureAlt:"alt",
-	// 	clickAction:() => "", //Não deixar o onClick aqui
-	// 	id:"3",
-	// 	subtitle:"pergunta?/titulo",
-	// 	text:"texto",
-	// 	date:"20/20/020",
-	// }
+	 {
+		pictureSrc:"https://scontent.fcgh12-1.fna.fbcdn.net/v/t1.0-1/p160x160/17264903_1299882363393696_6660679706534657845_n.jpg?oh=75a80e83e9e47ed5cebddd5b61070b79&oe=5AEDD24D",
+		pictureAlt:"alt",
+		clickAction:() => "", //Não deixar o onClick aqui
+		id:"3",
+		subtitle:"De onde veio a ideia?",
+		text:"MEU CORAÇAO NAO BATE, ELE PULA, AMO FUTEBOL,VIVO FUTEBOL.RESPIRO FUTEBOL",
+		date:"17/01/2018",
+	}
 ];
