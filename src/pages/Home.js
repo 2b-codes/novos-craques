@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 
+
 import { openSignupModal, showSuccessModalAction } from "../actions";
 import { SignupModal, HomeTemplate, Informations } from "../templates";
 import { aboutUsModel, cardMotivationModel, cardDepoimentModel } from "../models";

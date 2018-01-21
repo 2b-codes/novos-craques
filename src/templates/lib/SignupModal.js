@@ -6,7 +6,7 @@ import { InputText, Icon } from "../../atoms";
 import { WrapperModal, Paginator } from"../../molecules";
 import { AdditionalInformation, PersonalInfoForm, ConfirmationStep } from "../../organisms";
 import { SignupController } from "../../controllers";
-import { occupationModel } from "../../models";
+import { occupationModel, legModel } from "../../models";
 import { closeModalAction, showLoadingAction, closeLoadingAction, showSuccessModalAction } from "../../actions";
 
 
@@ -21,7 +21,7 @@ class SignupModal extends Component{
 				cell_phone: "",
 				email: "",
 				idolo:"",
-				perna:"",
+				leg: {id: "", label: ""},
 				sex:"",
 				birthday: new Date(),
 				username: "",
@@ -37,7 +37,7 @@ class SignupModal extends Component{
 				cell_phone: [],
 				email: [],
 				idolo:[],
-				perna:[],
+				leg:[],
 				sex: [],
 				birthday: [],
 				username: [],
@@ -49,6 +49,30 @@ class SignupModal extends Component{
  		this.controller=new SignupController(this);
 
  	}
+ 	componentDidMount(){		
+ 		if (!document.fullscreenElement &&    // alternative standard method		
+ 	      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods		
+ 	    if (document.documentElement.requestFullscreen) {		
+ 	      document.documentElement.requestFullscreen();		
+ 	    } else if (document.documentElement.msRequestFullscreen) {		
+ 	      document.documentElement.msRequestFullscreen();		
+ 	    } else if (document.documentElement.mozRequestFullScreen) {		
+ 	      document.documentElement.mozRequestFullScreen();		
+ 	    } else if (document.documentElement.webkitRequestFullscreen) {		
+ 	      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);		
+ 	    }		
+ 	  } else {		
+ 	    if (document.exitFullscreen) {		
+ 	      document.exitFullscreen();		
+ 	    } else if (document.msExitFullscreen) {		
+ 	      document.msExitFullscreen();		
+ 	    } else if (document.mozCancelFullScreen) {		
+ 	      document.mozCancelFullScreen();		
+ 	    } else if (document.webkitExitFullscreen) {		
+ 	      document.webkitExitFullscreen();		
+ 	    }		
+ 	  }		
+ 	}
 
  	renderStep(){
 
@@ -58,8 +82,10 @@ class SignupModal extends Component{
 					values={this.state.values}
 					onChange={this.controller.handleChange}
 					occupationOptions={occupationModel}
+					legOptions={legModel}
 				/>
 			);
+
 
  			case 2: return(
  				<AdditionalInformation 
@@ -81,8 +107,6 @@ class SignupModal extends Component{
 
  	}
 
-
-
 	render(){
 		const lastStep = (
 			<div className="container-next"onClick={this.controller.submit}>
@@ -93,6 +117,7 @@ class SignupModal extends Component{
 		return(
 			<WrapperModal 
 				show={this.props.show}
+				id={this.props.id}
 				title="Cadastre-se"
 				className="signup-modal"
 				classNameBody="signup-modal-body"
@@ -115,9 +140,8 @@ class SignupModal extends Component{
 const map = (state)=>{
 	return{
 		show: state.modal.showSignupModal,
+
 	};
 };
 
 export default connect(map, {closeModalAction, showLoadingAction, closeLoadingAction, showSuccessModalAction })(SignupModal);
-
-

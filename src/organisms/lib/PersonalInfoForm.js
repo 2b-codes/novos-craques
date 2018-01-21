@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { InputText, Subtitle, InputNumber, InputEmail, DropDown } from "../../atoms";
 import { InputGroup } from "../../molecules";
-import { legModel } from "../../models";
+
 
 
 export default class PersonalInfoForm extends Component{
 
 	render(){
-		const { className, onChange, values, options, occupationOptions } = this.props;
+		const { className, onChange, values, options, occupationOptions, legOptions } = this.props;
 		return(
 			<div className="personal">
 				<Subtitle>Informações Pessoais</Subtitle>
@@ -33,7 +33,7 @@ export default class PersonalInfoForm extends Component{
 				</InputGroup>
 
 				<InputGroup id="leg" label="Perna">
-					<DropDown options={legModel} value={values["role"]} id="leg" onChange={onChange}/>
+					<DropDown options={legOptions} value={values["leg"]} id="leg" onChange={onChange}/>
 				</InputGroup>
 
 			</div>
