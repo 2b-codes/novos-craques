@@ -9,12 +9,12 @@ export default [
 		date:"29/10/2017",
 	},
 	{
-		pictureSrc:"https://scontent.fcgh5-1.fna.fbcdn.net/v/t1.0-9/19424106_1779264648756091_8251207474811644220_n.jpg?oh=66ab4c1c28be580923c9c4baf1071ca6&oe=5A6A203E",
+		pictureSrc:"https://scontent.fcgh12-1.fna.fbcdn.net/v/t1.0-9/25591766_1981375851878302_692121771255274897_n.jpg?oh=a66f1e67c062a91819ff27e7aada67e1&oe=5AF49E08",
 		pictureAlt:"alt",
 		clickAction:() => "", //Não deixar o onClick aqui
 		id:"2",
 		subtitle:"Porque entrei no projeto ?",
-		text:"Quando criança tinha o sonho de ser um jogador, amava ver Ronaldo fenomeno jogar. Não abandonei o sonho mas estou velho pra isso. Depois de grande me apaixonei pela técnologia que existe pra romper barreiras e facilitar acessos, então porque não usar minha paixão para realizar sonhos?",
+		text:"Quando criança tinha o sonho de ser jogador, amava ver R9 jogar. Depois de grande me apaixonei pela técnologia que existe pra romper barreiras e facilitar acessos, então porque não usar minha paixão para realizar sonhos ?",
 		date:"17/01/2018",
 	},
 	 {
@@ -22,8 +22,17 @@ export default [
 		pictureAlt:"alt",
 		clickAction:() => "", //Não deixar o onClick aqui
 		id:"3",
-		subtitle:"De onde veio a ideia?",
-		text:"MEU CORAÇAO NAO BATE, ELE PULA, AMO FUTEBOL,VIVO FUTEBOL.RESPIRO FUTEBOL",
+		subtitle:"De onde veio a ideia ?",
+		text:"MEU CORAÇAO NÃO BATE, ELE PULA, AMO FUTEBOL, VIVO FUTEBOL. RESPIRO FUTEBOL",
 		date:"17/01/2018",
+	},
+	{
+		pictureSrc:"https://scontent.fcgh12-1.fna.fbcdn.net/v/t1.0-9/395525_10150534486633023_162600351_n.jpg?oh=b43272f143b4beb0693381a197e31e5e&oe=5AE2BDD9",
+		pictureAlt:"alt",
+		clickAction:() => "", //Não deixar o onClick aqui
+		id:"3",
+		subtitle:"De onde veio a ideia ?",
+		text:" Entrei no projeto por que une duas coisas que amo. Tecnologia e futebol. É incrível unir as duas coisas.",
+		date:"21/01/2018",
 	}
 ];
