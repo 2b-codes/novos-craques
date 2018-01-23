@@ -59,7 +59,7 @@ export default class SignupController extends MainController {
 			cell_phone: values.cell_phone,
 			email: values.email,
 			idol:values.idol,
-			leg: values.role.id,
+			leg: values.leg.id,
 			sex: values.sex.id,
 			birthday: values.birthday,
 			username: values.username,
@@ -75,9 +75,10 @@ export default class SignupController extends MainController {
 			case "last_name" : return  this.setState({currentStep: 1});
 			case "cell_phone" : return  this.setState({currentStep: 1});
 			case "email" : return  this.setState({currentStep: 1});
-			case "role" : return  this.setState({currentStep: 1});
 			case "idol" : return  this.setState({currentStep: 1});
 			case "leg" : return  this.setState({currentStep: 1});
+			case "role" : return  this.setState({currentStep: 1});
+			
 
 			case "sex" : return  this.setState({currentStep: 2});
 			case "birthday" : return  this.setState({currentStep: 2});

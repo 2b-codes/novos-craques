@@ -37,11 +37,17 @@ export default class ConfirmationStep extends Component {
 						<td>{values.email || ""}</td> 
 						{errors["email"][0] ? <td><Icon type="exclamationRed" /></td> : null}
 					</tr>
-					<tr onClick={() => selectAction("Sou")}>
-						<td>Perna</td>
+					<tr onClick={() => selectAction("leg")}>
+						<td>Sou</td>
 						<td>{values.leg.label || ""}</td> 
 						{errors["leg"][0] ? <td><Icon type="exclamationRed" /></td> : null}
 					</tr>
+					<tr onClick={() => selectAction("idol")}>
+						<td>Idolo</td>
+						<td>{values.idol || ""}</td> 
+						{errors["idol"][0] ? <td><Icon type="exclamationRed" /></td> : null}
+					</tr>
+					
 					<tr onClick={() => selectAction("role")}>
 						<td>Sou</td>
 						<td>{values.role.label || ""}</td> 

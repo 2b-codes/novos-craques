@@ -28,8 +28,8 @@ export default class PersonalInfoForm extends Component{
 					<DropDown options={occupationOptions} value={values["role"]} id="role" onChange={onChange}/>
 				</InputGroup>
 
-				<InputGroup id="idolo" label="Meu idolo é">
-					<InputText value={values["idolo"]} id="idolo" onChange={onChange}/>
+				<InputGroup id="idol" label="Meu idolo é">
+					<InputText value={values["idol"]} id="idol" onChange={onChange}/>
 				</InputGroup>
 
 				<InputGroup id="leg" label="Perna">
