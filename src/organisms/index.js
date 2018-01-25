@@ -8,6 +8,8 @@ import LoginForm from "./lib/LoginForm";
 import AdditionalInformation from "./lib/AdditionalInformation";
 import PersonalInfoForm from "./lib/PersonalInfoForm";
 import ConfirmationStep from "./lib/ConfirmationStep";
+import AdressForm from "./lib/AdressForm";
+import InicialForm from "./lib/InicialForm";
 
 export {
 	Coursel,
@@ -18,5 +20,7 @@ export {
 	LoginForm,
 	AdditionalInformation,
 	PersonalInfoForm,
-	ConfirmationStep
+	ConfirmationStep,
+	AdressForm,
+	InicialForm
 };

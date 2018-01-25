@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 
 import { InputText, Icon } from "../../atoms";
 import { WrapperModal, Paginator } from"../../molecules";
-import { AdditionalInformation, PersonalInfoForm, ConfirmationStep } from "../../organisms";
+import { AdditionalInformation, PersonalInfoForm, ConfirmationStep, AdressForm, InicialForm } from "../../organisms";
 import { SignupController } from "../../controllers";
-import { occupationModel, legModel } from "../../models";
+import { occupationModel, legModel, parentsModel } from "../../models";
 import { closeModalAction, showLoadingAction, closeLoadingAction, showSuccessModalAction } from "../../actions";
 
 
@@ -27,7 +27,8 @@ class SignupModal extends Component{
 				username: "",
 				password: "",
 				confirm_password: "",
-				role: {id: "", label: ""}
+				role: {id: "", label: ""},
+				parents:{id: "", label: ""},
 			},
 			contStep:3,
 			currentStep:1,
@@ -44,6 +45,7 @@ class SignupModal extends Component{
 				password: [],
 				confirm_password: [],
 				role: [],
+				parents:[],
 			}
  		};
  		this.controller=new SignupController(this);
@@ -78,24 +80,41 @@ class SignupModal extends Component{
 
  		switch(this.state.currentStep){
  			case 1: return (
-				<PersonalInfoForm 
+				<InicialForm
 					values={this.state.values}
 					onChange={this.controller.handleChange}
 					occupationOptions={occupationModel}
-					legOptions={legModel}
+					
+				/>
+			);
+ 			case 2: return (
+				<PersonalInfoForm 
+					values={this.state.values}
+					onChange={this.controller.handleChange}					
+					parentsOptions={ parentsModel }
+					
 				/>
 			);
 
 
- 			case 2: return(
+ 			case 3: return(
  				<AdditionalInformation 
 	 				values={this.state.values}
 					onChange={this.controller.handleChange}
 					onDateChange={this.controller.handleDateChange}
+					legOptions={legModel}
+				/>
+			);
+			case 4: return(
+ 				<AdressForm
+	 				values={this.state.values}
+					onChange={this.controller.handleChange}
+					onDateChange={this.controller.handleDateChange}
+
 				/>
 			);
 
- 			case 3: return(
+ 			case 5: return(
  				<ConfirmationStep 
 	 				values={this.state.values}
 					onChange={this.controller.handleChange}
