@@ -1,40 +1,39 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { InputText, Subtitle, InputNumber, InputEmail, DropDown } from "../../atoms";
+import { InputText, Subtitle, InputNumber, InputEmail, DropDown, InputDate } from "../../atoms";
 import { InputGroup } from "../../molecules";
+import { sexModel,legOptions } from "../../models";
 
 
 
 export default class PersonalInfoForm extends Component{
 
 	render(){
-		const { className, onChange, values, options, occupationOptions, legOptions } = this.props;
+		const { className, onChange, values, options, occupationOptions, onDateChange } = this.props;
 		return(
 			<div className="personal">
 				<Subtitle>Informações Pessoais</Subtitle>
-				<InputGroup id="name" label="Nome">
-					<InputText value={values["name"]} id="name" onChange={onChange}/>
-				</InputGroup>
+				
 				<InputGroup id="last_name" label="Sobrenome">
 					<InputText value={values["last_name"]} id="last_name" onChange={onChange}/>
 				</InputGroup>
-				<InputGroup id="cell_phone" label="Celular">
-					<InputNumber value={values["cell_phone"]} id="cell_phone" onChange={onChange}/>
+
+				<InputGroup id="birttday" label="Nascimento">
+					<InputDate value={values["birttday"]} id="birttday" onChange={onDateChange}/>
 				</InputGroup>
-				<InputGroup id="email" label="E-mail">
-					<InputEmail value={values["email"]} id="email" onChange={onChange}/>
-				</InputGroup>
-				<InputGroup id="role" label="Sou">
-					<DropDown options={occupationOptions} value={values["role"]} id="role" onChange={onChange}/>
+				<InputGroup id="sex" label="Sexo">
+					<DropDown options={sexModel} value={values["sex"]} id="sex" onChange={onChange}/>
 				</InputGroup>
 
-				<InputGroup id="idol" label="Meu idolo é">
-					<InputText value={values["idol"]} id="idol" onChange={onChange}/>
+				<InputGroup id="responsible" label="Nome do responsável">
+					<InputText value={values["responsible"]} id="responsible" onChange={onChange}/>
 				</InputGroup>
+				
+				<InputGroup id="responsible_cell_phone" label="Celular do responsável">
+					<InputNumber value={values["responsible_cell_phone"]} id="responsible_cell_phone" onChange={onChange}/>
+				</InputGroup>
+				
 
-				<InputGroup id="leg" label="Perna">
-					<DropDown options={legOptions} value={values["leg"]} id="leg" onChange={onChange}/>
-				</InputGroup>
 
 			</div>
 		);
