@@ -44,7 +44,8 @@ export default class SignupController extends MainController {
 			this.props.showSuccessModalAction();
 		}
 
-		else {
+		else { 
+			
 			errors = this.controller.verifyError(promise.error, errors);
 			this.setState({errors});
 			this.props.closeLoadingAction();

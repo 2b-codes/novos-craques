@@ -32,9 +32,6 @@ export default class PersonalInfoForm extends Component{
 				<InputGroup id="responsible_cell_phone" label="Celular do responsável">
 					<InputNumber value={values["responsible_cell_phone"]} id="responsible_cell_phone" onChange={onChange}/>
 				</InputGroup>
-				
-
-
 			</div>
 		);
 	}

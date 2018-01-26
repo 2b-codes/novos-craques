@@ -25,9 +25,6 @@ export default class InicialForm extends Component{
 				<InputGroup id="role" label="Você é ">
 					<DropDown options={occupationOptions} value={values["role"]} id="role" onChange={onChange}/>
 				</InputGroup>
-				
-
-
 			</div>
 		);
 	}

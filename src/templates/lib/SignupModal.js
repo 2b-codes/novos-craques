@@ -15,6 +15,7 @@ class SignupModal extends Component{
  	constructor(props){
  		super(props);
  		this.state={
+
  			values:{
  				name: "",
 				last_name: "",
@@ -30,6 +31,7 @@ class SignupModal extends Component{
 				role: {id: "", label: ""},
 				parents:{id: "", label: ""},
 			},
+			
 			contStep:3,
 			currentStep:1,
 			errors: {
