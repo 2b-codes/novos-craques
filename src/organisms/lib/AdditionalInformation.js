@@ -24,10 +24,12 @@ export default class AdditionalInformation extends Component{
 					<InputText value={values["position_1"]} id="position_1" onChange={onChange} placeholder=" Posição 1"/>
 				</InputGroup>
 
-				<InputGroup id="position_2" >
+
+				<InputGroup id="position_2">
 					<InputText value={values["position_2"]} id="position_2" onChange={onChange}placeholder=" Posição 2"/>
 				</InputGroup>
-				<InputGroup id="position_3" >
+
+				<InputGroup id="position_3">
 					<InputText value={values["position_3"]} id="position_3" onChange={onChange}placeholder=" Posição 3"/>
 				</InputGroup>
 

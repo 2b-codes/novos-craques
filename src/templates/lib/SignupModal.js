@@ -15,18 +15,17 @@ class SignupModal extends Component{
  	constructor(props){
  		super(props);
  		this.state={
+
  			values:{
  				name:"",
  				leg: {id: "", label: ""},
+ 				idol:"",
 				birthday: new Date(),
-				password: "",
 				confirm_password: "",
 				role: {id: "", label: ""},
-				parents:{id: "", label: ""},
 				last_name: "",
 				cell_phone:"",
 				email:"",
-				sex:{id: "", label: ""},				
 				username:"",
 				password:"",
 				cep:"",
@@ -41,6 +40,7 @@ class SignupModal extends Component{
 				height:"",
 				weight:"",
 				team:"",
+				findUs:"",
 				position_1:"",
 				position_2:"",
 				position_3:"",
@@ -64,7 +64,6 @@ class SignupModal extends Component{
 				role:[],
 				cep:[],
 				country:[],
-				sex:[],
 				origin_state:[],
 				origin_city:[],
 				origin_country:[],
