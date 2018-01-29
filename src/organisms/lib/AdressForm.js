@@ -13,7 +13,7 @@ export default class AdressForm extends Component{
 			<div className="adress">
 				<Subtitle>Endereço</Subtitle>
 				<InputGroup id="Logradouro" label="Logradouro">
-					<InputText value={values["Logradouro"]} id="Logradouro" onChange={onChange}/>
+					<InputText value={values["Logradouro"]} id="Logradouro" onChange={onChange} placeholder=" Rua/avenida"/>
 				</InputGroup>
 				<InputGroup id="complemento" label="Complemento">
 					<InputText value={values["complemento"]} id="complemento" onChange={onChange}/>

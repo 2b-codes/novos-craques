@@ -54,25 +54,42 @@ export default class SignupController extends MainController {
 
 	mapToApi(values) {
 		return {
-			name: values.name,
-			last_name: values.last_name,
-			cell_phone: values.cell_phone,
-			email: values.email,
-			idol:values.idol,
-			leg: values.leg.id,
-			sex: values.sex.id,
-			birthday: values.birthday,
-			username: values.username,
-			password: values.password,
-			active: true,
-			role: values.role.id,
+			name: 			values.name,
+			last_name: 		values.last_name,
+			cell_phone: 	values.cell_phone,
+			email: 			values.email,
+			idol: 			values.idol,
+			leg: 			values.leg.id,
+			sex: 			values.sex.id,
+			birthday: 		values.birthday,
+			username: 		values.username,
+			password: 		values.password,
+			active: 		true,
+			role: 			values.role.id,
+			cep: 			values.cep,
+			country:        values.country,
+			sex: 			values.sex,
+			origin_state: 	values.origin_state,
+			origin_city: 	values.origin_city,
+			origin_country: values.origin_country,
+			guardian_name:  values.guardian_name,
+			guardian_phone: values.guardian_phone,
+			formation: 		values.formation,
+			findUs: 		values.findUs.id,
+			height: 		values.height, 
+			weight: 		values.weight,
+			team: 			values.team, 
+			position_1: 	values.position_1,
+			position_2: 	values.position_2,
+			position_3: 	values.position_3,
+			about_user: 	values.about_user,
 		};
 	}
 
 	selectAction(item) {
 		switch(item) {
 			case "name" : return  this.setState({currentStep: 1});
-			case "last_name" : return  this.setState({currentStep: 1});
+			case "last_name" : return  this.setState({currentStep: 2});
 			case "cell_phone" : return  this.setState({currentStep: 1});
 			case "email" : return  this.setState({currentStep: 1});
 			case "idol" : return  this.setState({currentStep: 1});

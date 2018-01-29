@@ -5,6 +5,7 @@ import occupationModel from "./lib/occupationModel";
 import sexModel from "./lib/sexModel";
 import legModel from "./lib/legModel";
 import parentsModel from "./lib/parentsModel";
+import findUsModel from "./lib/findUsModel";
 export {
 	cardDepoimentModel,
 	cardMotivationModel,
@@ -12,6 +13,7 @@ export {
 	occupationModel,
 	sexModel,
 	legModel,
-	parentsModel
+	parentsModel,
+	findUsModel
 
 };

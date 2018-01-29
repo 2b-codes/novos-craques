@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { InputText, Subtitle, InputNumber, InputEmail, DropDown, InputDate } from "../../atoms";
 import { InputGroup } from "../../molecules";
-import { sexModel,legOptions } from "../../models";
+import { sexModel } from "../../models";
 
 
 
 export default class PersonalInfoForm extends Component{
 
 	render(){
-		const { className, onChange, values, options, occupationOptions, onDateChange } = this.props;
+		const { className, onChange, values, options, onDateChange } = this.props;
 		return(
 			<div className="personal">
 				<Subtitle>Informações Pessoais</Subtitle>
@@ -24,13 +24,19 @@ export default class PersonalInfoForm extends Component{
 				<InputGroup id="sex" label="Sexo">
 					<DropDown options={sexModel} value={values["sex"]} id="sex" onChange={onChange}/>
 				</InputGroup>
+				<InputGroup id="height" label="Altura">
+					<InputText value={values["height"]} id="height" onChange={onChange}/>
+				</InputGroup>
+				<InputGroup id="weight" label="Peso">
+					<InputText value={values["weight"]} id="weight" onChange={onChange}/>
+				</InputGroup>
 
-				<InputGroup id="responsible" label="Nome do responsável">
-					<InputText value={values["responsible"]} id="responsible" onChange={onChange}/>
+				<InputGroup id="guardian" label="Nome do responsável">
+					<InputText value={values["guardian"]} id="guardian" onChange={onChange}/>
 				</InputGroup>
 				
-				<InputGroup id="responsible_cell_phone" label="Celular do responsável">
-					<InputNumber value={values["responsible_cell_phone"]} id="responsible_cell_phone" onChange={onChange}/>
+				<InputGroup id="guardian_cell_phone" label="Celular do responsável">
+					<InputNumber value={values["guardian_cell_phone"]} id="guardian_cell_phone" onChange={onChange}/>
 				</InputGroup>
 				
 

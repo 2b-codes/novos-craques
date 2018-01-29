@@ -6,7 +6,7 @@ import { InputText, Icon } from "../../atoms";
 import { WrapperModal, Paginator } from"../../molecules";
 import { AdditionalInformation, PersonalInfoForm, ConfirmationStep, AdressForm, InicialForm } from "../../organisms";
 import { SignupController } from "../../controllers";
-import { occupationModel, legModel, parentsModel } from "../../models";
+import { occupationModel, legModel,findUsModel  } from "../../models";
 import { closeModalAction, showLoadingAction, closeLoadingAction, showSuccessModalAction } from "../../actions";
 
 
@@ -16,37 +16,70 @@ class SignupModal extends Component{
  		super(props);
  		this.state={
  			values:{
- 				name: "",
-				last_name: "",
-				cell_phone: "",
-				email: "",
-				idol:"",
-				leg: {id: "", label: ""},
-				sex:"",
+ 				name:"",
+ 				leg: {id: "", label: ""},
 				birthday: new Date(),
-				username: "",
 				password: "",
 				confirm_password: "",
 				role: {id: "", label: ""},
 				parents:{id: "", label: ""},
+				last_name: "",
+				cell_phone:"",
+				email:"",
+				sex:{id: "", label: ""},				
+				username:"",
+				password:"",
+				cep:"",
+				country:"",
+				sex:"",
+				origin_state:  "",
+				origin_city: 	"",
+				origin_country: "",
+				guardian_name:  "",
+				guardian_phone: "",
+				fundUs:{id: "", label: ""},
+				height:"",
+				weight:"",
+				team:"",
+				position_1:"",
+				position_2:"",
+				position_3:"",
 			},
-			contStep:3,
+
+			contStep:5,
 			currentStep:1,
 			errors: {
-				name: [],
-				last_name: [],
-				cell_phone: [],
-				email: [],
+
+				name:[],
+				last_name:[],
+				cell_phone:[],
+				email:[],
 				idol:[],
 				leg:[],
-				sex: [],
-				birthday: [],
-				username: [],
-				password: [],
-				confirm_password: [],
-				role: [],
-				parents:[],
+				sex:[],
+				birthday:[],
+				username:[],
+				password:[],
+				confirm_password:[] ,
+				role:[],
+				cep:[],
+				country:[],
+				sex:[],
+				origin_state:[],
+				origin_city:[],
+				origin_country:[],
+				guardian_name:[],
+				guardian_phone:[],
+				findUs:[],
+				height:[],
+				weight:[],
+				team:[],
+				position_1:[],
+				position_2:[],
+				position_3:[],
+				
 			}
+			
  		};
  		this.controller=new SignupController(this);
 
@@ -84,6 +117,7 @@ class SignupModal extends Component{
 					values={this.state.values}
 					onChange={this.controller.handleChange}
 					occupationOptions={occupationModel}
+					findUsOptions={findUsModel}
 					
 				/>
 			);
@@ -91,7 +125,7 @@ class SignupModal extends Component{
 				<PersonalInfoForm 
 					values={this.state.values}
 					onChange={this.controller.handleChange}					
-					parentsOptions={ parentsModel }
+					
 					
 				/>
 			);
