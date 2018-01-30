@@ -41,12 +41,7 @@ export default class ConfirmationStep extends Component {
 						<td>Sou</td>
 						<td>{values.leg.label || ""}</td> 
 						{errors["leg"][0] ? <td><Icon type="exclamationRed" /></td> : null}
-					</tr>
-					<tr onClick={() => selectAction("idol")}>
-						<td>Idolo</td>
-						<td>{values.idol || ""}</td> 
-						{errors["idol"][0] ? <td><Icon type="exclamationRed" /></td> : null}
-					</tr>
+					</tr>				
 					
 					<tr onClick={() => selectAction("role")}>
 						<td>Sou</td>
@@ -67,6 +62,11 @@ export default class ConfirmationStep extends Component {
 						<td>Apelido</td>
 						<td>{values.username}</td> 
 						{errors["username"][0] ? <td><Icon type="exclamationRed" /></td> : null}
+					</tr>
+					<tr onClick={() => selectAction("username")}>
+						<td>Responsável</td>
+						<td>{values.guardian_name}</td> 
+						{errors["guardian_name"][0] ? <td><Icon type="exclamationRed" /></td> : null}
 					</tr>
 				</tbody>
 			</table>

@@ -1,9 +1,6 @@
 export default [
 
-	{
-		id:"Magazine",
-		label:"revista"
-	},
+	
 	{
 		id:"Net",
 		label:"Internet"
@@ -20,10 +17,7 @@ export default [
 		id:"PlayStore",
 		label:"PlayStore"
 	},
-	{
-		id:"newspaper",
-		label:"Jornal"
-	}
+	
 
 ];
 

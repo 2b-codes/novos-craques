@@ -12,8 +12,8 @@ export default class AdressForm extends Component{
 		return(
 			<div className="adress">
 				<Subtitle>Endereço</Subtitle>
-				<InputGroup id="Logradouro" label="Logradouro">
-					<InputText value={values["Logradouro"]} id="Logradouro" onChange={onChange} placeholder=" Rua/avenida"/>
+				<InputGroup id="logradouro" label="Logradouro">
+					<InputText value={values["logradouro"]} id="logradouro" onChange={onChange} placeholder=" Rua/avenida"/>
 				</InputGroup>
 				<InputGroup id="complemento" label="Complemento">
 					<InputText value={values["complemento"]} id="complemento" onChange={onChange}/>
@@ -22,18 +22,18 @@ export default class AdressForm extends Component{
 				<InputGroup id="bairro" label="Bairro">
 					<InputText value={values["bairro"]} id="bairro" onChange={onChange}/>
 				</InputGroup>
-				<InputGroup id="cidade" label="Cidade">
-					<InputText value={values["cidade"]} id="cidade" onChange={onChange}/>
+				<InputGroup id="origin_city" label="Cidade">
+					<InputText value={values["origin_city"]} id="origin_city" onChange={onChange}/>
 				</InputGroup>
-				<InputGroup id="estado" label="Estado">
-					<InputText value={values["estado"]} id="estado" onChange={onChange}/>
+				<InputGroup id="origin_state" label="Estado">
+					<InputText value={values["origin_state"]} id="origin_state" onChange={onChange}/>
 				</InputGroup>
 
 				<InputGroup id="cep" label="Cep">
 					<InputNumber value={values["cep"]} id="cep" onChange={onChange}/>
 				</InputGroup>
-				<InputGroup id="pais" label="País">
-					<InputEmail value={values["pais"]} id="pais" onChange={onChange}/>
+				<InputGroup id="origin_country" label="País">
+					<InputEmail value={values["origin_country"]} id="origin_country" onChange={onChange}/>
 				</InputGroup>				
 
 			</div>

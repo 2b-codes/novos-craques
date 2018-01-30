@@ -31,12 +31,12 @@ export default class PersonalInfoForm extends Component{
 					<InputText value={values["weight"]} id="weight" onChange={onChange}/>
 				</InputGroup>
 
-				<InputGroup id="guardian" label="Nome do responsável">
-					<InputText value={values["guardian"]} id="guardian" onChange={onChange}/>
+				<InputGroup id="guardian_name" label="Nome do responsável">
+					<InputText value={values["guardian_name"]} id="guardian_name" onChange={onChange}/>
 				</InputGroup>
 				
-				<InputGroup id="guardian_cell_phone" label="Celular do responsável">
-					<InputNumber value={values["guardian_cell_phone"]} id="guardian_cell_phone" onChange={onChange}/>
+				<InputGroup id="guardian_phone" label="Celular do responsável">
+					<InputNumber value={values["guardian_phone"]} id="guardian_phone" onChange={onChange}/>
 				</InputGroup>
 			</div>
 		);

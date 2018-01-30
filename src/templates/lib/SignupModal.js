@@ -19,8 +19,7 @@ class SignupModal extends Component{
  			values:{
  				name:"",
  				leg: {id: "", label: ""},
- 				idol:"",
-				birthday: new Date(),
+ 				birthday: new Date(),
 				confirm_password: "",
 				role: {id: "", label: ""},
 				last_name: "",
@@ -29,8 +28,7 @@ class SignupModal extends Component{
 				username:"",
 				password:"",
 				cep:"",
-				country:"",
-				sex:"",
+				sex:{id: "", label: ""},
 				origin_state:  "",
 				origin_city: 	"",
 				origin_country: "",
@@ -40,7 +38,6 @@ class SignupModal extends Component{
 				height:"",
 				weight:"",
 				team:"",
-				findUs:"",
 				position_1:"",
 				position_2:"",
 				position_3:"",
@@ -54,7 +51,6 @@ class SignupModal extends Component{
 				last_name:[],
 				cell_phone:[],
 				email:[],
-				idol:[],
 				leg:[],
 				sex:[],
 				birthday:[],
@@ -160,6 +156,7 @@ class SignupModal extends Component{
  	}
 
 	render(){
+		console.log(this.state.values);
 		const lastStep = (
 			<div className="container-next"onClick={this.controller.submit}>
 				<span>Finalizar</span>
