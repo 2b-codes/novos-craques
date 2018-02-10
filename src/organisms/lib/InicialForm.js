@@ -26,7 +26,7 @@ export default class InicialForm extends Component{
 					<DropDown options={occupationModel} value={values["role"]} id="role" onChange={onChange}/>
 				</InputGroup>
 				<InputGroup id="findUs" label="Cono chegou até nós ?">
-					<DropDown options={findUsModel} value={values["fundUs"]} id="fundUs" onChange={onChange}/>
+					<DropDown options={findUsModel} value={values["fundUs"]} id="findUs" onChange={onChange}/>
 				</InputGroup>
 				<InputGroup id="password" label="Senha">		
  					<InputText type="password" value={values["password"]} id="password" onChange={onChange}/>		
