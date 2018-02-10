@@ -34,7 +34,7 @@ class SignupModal extends Component{
 				origin_country: "",
 				guardian_name:  "",
 				guardian_phone: "",
-				fundUs:{id: "", label: ""},
+				findUs:{id: "", label: ""},
 				height:"",
 				weight:"",
 				team:"",
