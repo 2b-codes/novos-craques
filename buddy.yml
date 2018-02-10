@@ -1,0 +1,16 @@
+- peline: "Deploy prod"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "master"
+  actions:
+  - action: "Deploy Master to Prod"
+    type: "BUILD"
+    docker_image_name: "novos-craques/nodejs69"
+    docker_image_tag: "latest"
+    execute_commands:
+    - TAG="${execution.to_revision.revision}"
+      ENV=prod
+      OPENSHIFT_NAMESPACE="${OPENSHIFT_NAMESPACE}"
+      OPENSHIFT_API_URL="${OPENSHIFT_API_URL}"
+      OPENSHIFT_TOKEN="${OPENSHIFT_TOKEN}"
+      OPENSHIFT_DOMAIN="${OPENSHIFT_DOMAIN}"
+      ./k8s/deploy
