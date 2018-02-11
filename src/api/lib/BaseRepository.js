@@ -1,7 +1,9 @@
 
 import axios from "axios";
 
-const ROOT_URL = `${ "http://localhost:3000"}/api`;
+console.log("SAAALVE \n\n", process.env.ROOT_URL);
+
+const ROOT_URL =  `${process.env.ROOT_URL}/api`;
 
 export default class BaseRepository {
 
@@ -10,6 +12,7 @@ export default class BaseRepository {
 	}
 
 	async post(endpoint, body) {
+		console.log("BASE REPOSITORY - in post()", ROOT_URL);
 		return await this.resolvePromise(axios.post(`${ROOT_URL}${endpoint}`, body));
 	}
 
