@@ -12,8 +12,8 @@ export default class AdressForm extends Component{
 		return(
 			<div className="adress">
 				<Subtitle>Endereço</Subtitle>
-				<InputGroup id="logradouro" label="Logradouro">
-					<InputText value={values["logradouro"]} id="logradouro" onChange={onChange} placeholder=" Rua/avenida"/>
+				<InputGroup id="street" label="logradouro">
+					<InputText value={values["street"]} id="street" onChange={onChange} placeholder=" Rua/avenida"/>
 				</InputGroup>
 				<InputGroup id="complemento" label="Complemento">
 					<InputText value={values["complemento"]} id="complemento" onChange={onChange}/>
