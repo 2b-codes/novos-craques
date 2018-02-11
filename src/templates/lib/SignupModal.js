@@ -38,7 +38,7 @@ class SignupModal extends Component{
 				findUs: {id: "", label: ""},
 				height: "",
 				weight: "",
-				teamkey: "value", "",
+				teamkey: "value",
 				position_2: "",
 				position_3: "",
 				position_1: "",
