@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import InputMask from "react-input-mask";
 import { Icon } from "../index";
 
 export default class InputNumber extends Component {
@@ -29,13 +29,15 @@ export default class InputNumber extends Component {
 		const{ id, value, className, placeholder, icon }= this.props;
 		return(
 			<div className={`input-number ${className}`}>
-				<input 
+				<InputMask
 					type="tel" 
 					id={id} 
 					value={value} 
 					onChange={this.validate.bind(this)}
 					placeholder={placeholder}
 					onKeyDown={this.keyDownChange.bind(this)}
+					 {...this.props} mask="+55 (99) 9 9999-9999" maskChar=" " 
+
 				/> 
 				{icon ? <Icon type="arrowUpDown" /> : null}
 			</div>

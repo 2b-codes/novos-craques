@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import InputMask from "react-input-mask";
 
 
 export default class InputCep extends Component {
@@ -37,14 +38,15 @@ export default class InputCep extends Component {
 
 		const{ className, id,  value, onChange, placeholder }=this.props;
 		return( 
-			<input 
+			<InputMask
 				type="tel"
 				className={`input-cep ${className}`}
 				id={id}
 				value={this.mask(value)}
 				onChange={this.validate.bind(this)}
 				placeholder={placeholder}
-				maxLength="9"
+				maxLength="10"
+				{...this.props} mask="99999-999" maskChar=" " 
 			/>
 		);
 	}

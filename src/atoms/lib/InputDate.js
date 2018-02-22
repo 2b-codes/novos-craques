@@ -29,7 +29,7 @@ export default class InputDate extends Component {
 		}=this.props;
 
 		const dateProps = { 
-			placeholder,
+			placeholder: "DD/MM/YYYY",
 			dateFormat: dateFormat || "DD/MM/YYYY",
 			timeFormat: !noTime,
 			onChange,

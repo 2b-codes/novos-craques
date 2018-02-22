@@ -21,9 +21,11 @@ export default class AdditionalInformation extends Component{
 					<DropDown options={legOptions} value={values["leg"]} id="leg" onChange={onChange}/>
 				</InputGroup>
 				<InputGroup id="position_1" label="Quais posições você joga ?">
-					<InputText value={values["position_1"]} id="position_1" onChange={onChange} placeholder=" Posição 1"/>
+					<InputText value={values["position_1"]} id="position_1" onChange={onChange} placeholder=" Ex: Meio Campo"/>
 				</InputGroup>
-
+				<InputGroup id="findUs" label="Cono chegou até nós ?">
+					<DropDown options={findUsModel} value={values["findUs"]} id="findUs" onChange={onChange}/>
+				</InputGroup>
 
 				<InputGroup id="position_2">
 					<InputText value={values["position_2"]} id="position_2" onChange={onChange}placeholder=" Posição 2"/>

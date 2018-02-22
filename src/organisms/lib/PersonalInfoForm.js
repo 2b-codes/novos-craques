@@ -14,29 +14,25 @@ export default class PersonalInfoForm extends Component{
 			<div className="personal">
 				<Subtitle>Informações Pessoais</Subtitle>
 				
-				<InputGroup id="last_name" label="Sobrenome">
-					<InputText value={values["last_name"]} id="last_name" onChange={onChange}/>
-				</InputGroup>
-
 				<InputGroup id="birttday" label="Nascimento">
-					<InputDate value={values["birttday"]} id="birttday" onChange={onDateChange}/>
+					<InputDate value={values["birttday"]} id="birttday"  onChange={onDateChange}/>
 				</InputGroup>
 				<InputGroup id="sex" label="Sexo">
 					<DropDown options={sexModel} value={values["sex"]} id="sex" onChange={onChange}/>
 				</InputGroup>
 				<InputGroup id="height" label="Altura">
-					<InputText value={values["height"]} id="height" onChange={onChange}/>
+					<InputText value={values["height"]} id="height" placeholder="0.00"onChange={onChange}/>
 				</InputGroup>
 				<InputGroup id="weight" label="Peso">
-					<InputText value={values["weight"]} id="weight" onChange={onChange}/>
+					<InputText value={values["weight"]} id="weight" placeholder="00.00G"onChange={onChange}/>
 				</InputGroup>
-
+				
 				<InputGroup id="guardian_name" label="Nome do responsável">
-					<InputText value={values["guardian_name"]} id="guardian_name" onChange={onChange}/>
+					<InputText value={values["guardian_name"]} id="guardian_name" placeholder="Pais/Avós/tios"onChange={onChange}/>
 				</InputGroup>
 				
 				<InputGroup id="guardian_phone" label="Celular do responsável">
-					<InputNumber value={values["guardian_phone"]} id="guardian_phone" onChange={onChange}/>
+					<InputNumber value={values["guardian_phone"]} id="guardian_phone" placeholder="00-0000-0000"onChange={onChange}/>
 				</InputGroup>
 			</div>
 		);

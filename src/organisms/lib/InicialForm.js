@@ -15,27 +15,26 @@ export default class InicialForm extends Component{
 				<InputGroup id="name" label="Diz aí como você chama?">
 					<InputText value={values["name"]} id="name" onChange={onChange} placeholder="nome"/>
 				</InputGroup>
+				<InputGroup id="last_name" label="Sobrenome">
+					<InputText value={values["last_name"]} id="last_name" placeholder="Ultimo Nome"onChange={onChange}/>
+				</InputGroup>
 				
 				<InputGroup id="cell_phone" label="Como podemos te achar?">
 					<InputNumber value={values["cell_phone"]} id="cell_phone" onChange={onChange} placeholder="telefone"/>
 				</InputGroup>
 				<InputGroup id="email" label="E-mail">
-					<InputEmail value={values["email"]} id="email" onChange={onChange}/>
+					<InputEmail value={values["email"]} id="email" onChange={onChange} placeholder="email@email.com"/>
 				</InputGroup>
 				<InputGroup id="role" label="Você é ">
 					<DropDown options={occupationModel} value={values["role"]} id="role" onChange={onChange}/>
 				</InputGroup>
-				<InputGroup id="findUs" label="Cono chegou até nós ?">
-					<DropDown options={findUsModel} value={values["findUs"]} id="findUs" onChange={onChange}/>
-				</InputGroup>
+				
 				<InputGroup id="password" label="Senha">		
  					<InputText type="password" value={values["password"]} id="password" onChange={onChange}/>		
   				</InputGroup>
   				<InputGroup id="confirm_password" label="Confirmar Senha">
  					<InputText type="password" value={values["confirm_password"]} id="confirm_password" onChange={onChange}/>
   				</InputGroup>
-				
-
 			</div>
 		);
 	}

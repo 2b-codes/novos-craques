@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { InputText, Subtitle, InputNumber, InputEmail, DropDown } from "../../atoms";
+import { InputText, Subtitle,InputCep, InputNumber, InputEmail, DropDown } from "../../atoms";
 import { InputGroup } from "../../molecules";
 
 
@@ -16,7 +16,7 @@ export default class AdressForm extends Component{
 					<InputText value={values["street"]} id="street" onChange={onChange} placeholder=" Rua/avenida"/>
 				</InputGroup>
 				<InputGroup id="complemento" label="Complemento">
-					<InputText value={values["complemento"]} id="complemento" onChange={onChange}/>
+					<InputText value={values["complemento"]} id="complemento" placeholder="Apt ou Casa "onChange={onChange}/>
 				</InputGroup>
 				
 				<InputGroup id="bairro" label="Bairro">
@@ -30,7 +30,7 @@ export default class AdressForm extends Component{
 				</InputGroup>
 
 				<InputGroup id="cep" label="Cep">
-					<InputNumber value={values["cep"]} id="cep" onChange={onChange}/>
+					<InputCep value={values["cep"]} id="cep" placeholder="00000-000"onChange={onChange}/>
 				</InputGroup>
 				<InputGroup id="origin_country" label="País">
 					<InputEmail value={values["origin_country"]} id="origin_country" onChange={onChange}/>
