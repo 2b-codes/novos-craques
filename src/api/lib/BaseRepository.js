@@ -1,9 +1,6 @@
-
 import axios from "axios";
 
-console.log("SAAALVE \n\n", process.env.ROOT_URL);
-
-const ROOT_URL =  `${process.env.ROOT_URL}/api`;
+const ROOT_URL =  `${process.env.ROOT_URL || "localhost:3300"}/api`;
 
 export default class BaseRepository {
 

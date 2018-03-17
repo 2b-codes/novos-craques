@@ -8,10 +8,10 @@ const mmq = require("gulp-merge-media-queries");
 const plumber = require("gulp-plumber");
 const autoprefixer = require("autoprefixer");
 
-const env = process.env.NODE_ENV || "dev";
+const env = process.env.NODE_ENV || "local";
 
 gulp.task("default", ["style"], () => {
-	if(env == "dev") gulp.watch("stylesheets/**/*", ["style"]);
+	if(env == "local") gulp.watch("stylesheets/**/*", ["style"]);
 });
 
 gulp.task("style", () => {

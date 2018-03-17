@@ -16,15 +16,15 @@ module.exports = {
     "react"
   ],
   "rules": {
-    "indent": [
-      "error",
-      "tab"
-    ],
-    "indent": [
-      "error",
-      "tab",
-      { "SwitchCase": 1 }
-    ],
+    // "indent": [
+    //   "error",
+    //   "tab"
+    // ],
+    // "indent": [
+    //   "error",
+    //   "tab",
+    //   { "SwitchCase": 1 }
+    // ],
     "linebreak-style": [
       "error",
       "unix"

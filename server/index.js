@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 
 routes(app);
 
-console.log("\n-----------\n\n\n", process.env.ROOT_URL, "\n-----------\n\n\n");
+console.log("Connected with API address - ", process.env.ROOT_URL || "localhost:3300");
 
 app.listen(port, err => {
 	if(err) console.log(err);

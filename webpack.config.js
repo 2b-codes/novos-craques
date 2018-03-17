@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 const UglifyJS = require('uglifyjs-webpack-plugin');
 
-const env = process.env.NODE_ENV || "dev";
+const env = process.env.NODE_ENV || "local";
 const ROOT_URL = process.env.ROOT_URL;
 
 const plugins = [];
@@ -31,5 +31,5 @@ module.exports = {
     }]
   },
   plugins,
-  watch: env == "dev"
+  watch: env == "local"
 };
